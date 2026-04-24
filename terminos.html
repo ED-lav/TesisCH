@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <title>Tesis Challenge | Términos y Condiciones</title>
+    <meta name="description" content="Términos y condiciones de uso de Tesis Challenge. Conoce las normas y políticas que rigen nuestros servicios de asesoría académica.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tesischallenge.com/terminos-y-condiciones.html">
+    <meta property="og:title" content="Tesis Challenge | Términos y Condiciones">
+    <meta property="og:description" content="Términos y condiciones de uso de Tesis Challenge.">
+    <meta property="og:image" content="https://www.tesischallenge.com/logo_preview.png">
+    
+    <link rel="icon" type="image/png" href="logo_png.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* ============================================
+           Tesis Challenge - Estilos Términos y Condiciones
+           ============================================ */
+
+        :root {
+            --primary: #00A8FF;
+            --primary-dark: #005189;
+            --primary-light: #40C5FF;
+            --secondary: #1DB2FF;
+            --dark: #1e2939;
+            --dark-bg: #0a0a0a;
+            --white: #FFFFFF;
+            --gray-light: #F8F8F8;
+            --gray-medium: #E6E6E6;
+            --gray-dark: #4A4A4A;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+            --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.2);
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        @media (max-width: 768px) {
+            html { font-size: 14px; }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--dark);
+            line-height: 1.5;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 1rem; }
+        }
+
+        /* ============================================ */
+        /* HEADER Y NAVEGACIÓN */
+        /* ============================================ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, rgba(0, 168, 255, 0.9), rgba(0, 81, 137, 0.95));
+            backdrop-filter: blur(20px);
+            border-radius: 60px;
+            margin: 0 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 1.8rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--white);
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--white);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        .nav-link:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            cursor: pointer;
+            border: none;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 76px;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(0, 168, 255, 0.98), rgba(0, 81, 137, 0.98));
+            backdrop-filter: blur(20px);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .mobile-menu a {
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 0.5rem;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .menu-toggle { display: flex; }
+        }
+
+               /* ============================================ */
+/* HERO CON IMAGEN DE FONDO */
+/* ============================================ */
+.legal-hero {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* IMAGEN DE FONDO */
+.legal-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('logo_png.png'); /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+/* OVERLAY OSCURO PARA LEGIBILIDAD DEL TEXTO */
+.legal-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+/* Contenido del hero */
+.legal-hero-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.legal-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0, 168, 255, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #40C5FF;
+    border: 1px solid rgba(64, 197, 255, 0.4);
+}
+
+.legal-hero-badge-dot {
+    width: 8px;
+    height: 8px;
+    background: #40C5FF;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+}
+
+.legal-hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.legal-hero-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .legal-hero { height: 40vh; min-height: 300px; }
+    .legal-hero-title { font-size: 2rem; }
+    .legal-hero-subtitle { font-size: 0.9rem; }
+    .legal-hero-badge { font-size: 0.75rem; padding: 0.4rem 1rem; margin-bottom: 1rem; }
+}
+
+
+        @media (max-width: 480px) {
+            .legal-hero-title { font-size: 1.5rem; }
+        }
+
+        /* ============================================ */
+        /* CONTENIDO LEGAL */
+        /* ============================================ */
+        .legal-content {
+            padding: 4rem 0;
+            background: var(--dark-bg);
+        }
+
+        .legal-wrapper {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .legal-intro {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-intro p {
+            margin-bottom: 1rem;
+        }
+
+        .legal-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .legal-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .legal-section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .legal-section-title i {
+            font-size: 1.3rem;
+            color: var(--primary-light);
+        }
+
+        .legal-section-title.numbered {
+            font-size: 1.2rem;
+        }
+
+        .legal-section-content {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .legal-section-content p {
+            margin-bottom: 0.8rem;
+        }
+
+        .legal-section-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section-content ul {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin: 0.8rem 0;
+        }
+
+        .legal-section-content li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-section-content li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-light);
+        }
+
+        .legal-highlight {
+            color: var(--primary-light);
+            font-weight: 600;
+        }
+
+        .legal-note {
+            background: rgba(0, 168, 255, 0.1);
+            border-left: 3px solid var(--primary-light);
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .legal-subsection {
+            margin-top: 1.5rem;
+            padding-top: 0.5rem;
+        }
+
+        .legal-subsection-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            margin-bottom: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .legal-wrapper { padding: 1.5rem; }
+            .legal-section-title { font-size: 1.1rem; }
+            .legal-section-title i { font-size: 1.1rem; }
+            .legal-section-content { font-size: 0.85rem; }
+            .legal-subsection-title { font-size: 1rem; }
+        }
+
+        /* ============================================ */
+        /* FOOTER */
+        /* ============================================ */
+        .footer {
+            background: #000000;
+            padding: 3rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .footer-col {
+            flex: 1;
+        }
+
+        .footer-logo {
+            width: 70px;
+            height: auto;
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-copyright {
+            font-size: 0.75rem;
+            color: var(--gray-light);
+            opacity: 0.7;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-light);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 1.4rem;
+            color: white;
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                text-align: left;
+            }
+            .footer-links { justify-content: center; }
+            .footer-social { justify-content: flex-end; }
+        }
+
+        /* ============================================ */
+        /* WHATSAPP FLOTANTE */
+        /* ============================================ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn {
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+            animation: pulseWhatsapp 2s infinite;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        @keyframes pulseWhatsapp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        /* ============================================ */
+        /* ANIMACIONES */
+        /* ============================================ */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="logo_png.png" alt="Tesis Challenge" class="logo-img">
+                    <span class="logo-text">Tesis Challenge</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="quienes-somos.html" class="nav-link">Quiénes somos</a></li>
+                    <li><a href="preguntasfrecuentes.html" class="nav-link">Preguntas frecuentes</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog Académico</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                <li><a href="preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+                <li><a href="blog.html">Blog Académico</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- SECCIÓN 1: HERO -->
+        <section class="legal-hero">
+            <div class="legal-hero-bg"></div>
+            <div class="legal-hero-overlay"></div>
+            <div class="legal-hero-container">
+                <div class="legal-hero-badge animate-on-scroll">
+                    <span class="legal-hero-badge-dot"></span>
+                    <span>Información legal</span>
+                </div>
+                <h1 class="legal-hero-title animate-on-scroll">Términos y Condiciones</h1>
+                <p class="legal-hero-subtitle animate-on-scroll">Lee atentamente los términos que rigen el uso de nuestros servicios y plataforma.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CONTENIDO LEGAL -->
+        <section class="legal-content">
+            <div class="container">
+                <div class="legal-wrapper">
+
+                    <!-- INTRODUCCIÓN -->
+                    <div class="legal-intro animate-on-scroll">
+                        <p>El presente documento establece los términos y condiciones generales (en adelante, "Términos y Condiciones") que regulan el acceso y uso del sitio web de <span class="legal-highlight">TESIS CHALLENGE</span>, marca comercial perteneciente a <span class="legal-highlight">EXPOSANJUAN SRL</span> (en adelante, "la Empresa"), con domicilio legal en San Juan, Argentina.</p>
+                        <p>La utilización de este sitio web implica la aceptación plena y sin reservas de los presentes Términos y Condiciones. En caso de no estar de acuerdo con los mismos, el usuario deberá abstenerse de utilizar el sitio.</p>
+                    </div>
+
+                    <!-- 1. Objeto del sitio -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-file-text"></i>
+                            1. Objeto del sitio
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>El sitio web de TESIS CHALLENGE tiene por finalidad brindar información sobre los servicios de asesoría académica, gestión y acompañamiento en el desarrollo de trabajos de investigación y proyectos académicos.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Condiciones de uso -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-check-circle"></i>
+                            2. Condiciones de uso
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>El acceso y navegación por el sitio es gratuito y no requiere registro previo. Sin perjuicio de ello, la contratación de los servicios ofrecidos sí estará sujeta a las condiciones de contratación que se detallan más adelante. El usuario se compromete a utilizar el sitio de forma lícita, de acuerdo con la legislación vigente en la República Argentina y conforme a los presentes Términos y Condiciones.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Propiedad intelectual -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-copyright"></i>
+                            3. Propiedad intelectual
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>Todos los contenidos, marcas, logotipos, diseños, textos y material gráfico incluidos en el sitio son propiedad de TESIS CHALLENGE / EXPOSANJUAN SRL o de terceros que han autorizado su uso. Queda prohibida su reproducción, distribución o modificación sin autorización expresa y por escrito de la Empresa.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Contratación de servicios -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-file-earmark-text"></i>
+                            4. Contratación de servicios
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>La contratación de los servicios ofrecidos por TESIS CHALLENGE se formalizará mediante acuerdo entre el cliente y la Empresa, previa aceptación de un presupuesto detallado. Los plazos, costos y condiciones particulares serán informados al cliente antes de la aceptación.</p>
+                            <p>La Empresa se compromete a brindar un servicio profesional, confidencial y ajustado a lo pactado. El cliente, por su parte, se compromete a proporcionar información veraz y completa necesaria para la prestación del servicio.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Limitación de responsabilidad -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-shield-exclamation"></i>
+                            5. Limitación de responsabilidad
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>TESIS CHALLENGE no será responsable por el uso indebido que los clientes realicen de los materiales entregados. Los servicios brindados son de asesoramiento y acompañamiento académico; en ningún caso constituyen sustitución de la responsabilidad del alumno frente a la institución educativa.</p>
+                        </div>
+                    </div>
+
+                    <!-- 6. Protección de datos personales -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-lock"></i>
+                            6. Protección de datos personales
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>La Empresa garantiza la confidencialidad y protección de los datos personales proporcionados por los usuarios, de acuerdo con lo establecido en la Ley 25.326 de Protección de Datos Personales de la República Argentina.</p>
+                            <p>Los datos serán utilizados exclusivamente para la prestación de los servicios contratados y no serán cedidos a terceros sin consentimiento expreso del titular, salvo obligación legal.</p>
+                        </div>
+                    </div>
+
+                    <!-- 7. Modificaciones -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-arrow-repeat"></i>
+                            7. Modificaciones
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>La Empresa se reserva el derecho de modificar, actualizar o eliminar en cualquier momento los contenidos del sitio web, así como los presentes Términos y Condiciones. Dichas modificaciones serán publicadas en el sitio y entrarán en vigencia desde su publicación.</p>
+                        </div>
+                    </div>
+
+                    <!-- 8. Legislación aplicable y jurisdicción -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-gavel"></i>
+                            8. Legislación aplicable y jurisdicción
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>Los presentes Términos y Condiciones se rigen por la legislación de la República Argentina. Cualquier controversia derivada de su interpretación o cumplimiento será sometida a la jurisdicción de los tribunales ordinarios de la provincia de San Juan, con renuncia a cualquier otro fuero o jurisdicción que pudiera corresponder.</p>
+                            <div class="legal-note">
+                                <i class="bi bi-envelope"></i> En caso de dudas o consultas, los usuarios pueden comunicarse a través del correo electrónico oficial: <span class="legal-highlight">soporte@tesischallenge.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Condiciones contractuales entre el cliente y la empresa -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-file-contract"></i>
+                            9. Condiciones contractuales entre el cliente y la empresa
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>La contratación de los servicios ofrecidos por TESIS CHALLENGE implica que el cliente acepta los términos de este contrato. La formalización se realiza mediante la cumplimentación del formulario de pedido disponible en la web, considerándose al cliente como tal desde el momento en que envía su solicitud.</p>
+                        </div>
+                    </div>
+
+                    <!-- PRIMERO. Objeto del contrato -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title">
+                            <i class="bi bi-briefcase"></i>
+                            PRIMERO. Objeto del contrato
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>Mediante este contrato, el cliente adquiere servicios de tutorización, redacción y acompañamiento académico. La Empresa garantiza la calidad de los textos y contenidos entregados. El cliente podrá seleccionar los tipos de servicios que desea recibir a través del formulario de presupuesto, comprometiéndose la Empresa a entregar materiales originales y libres de derechos de terceros.</p>
+                        </div>
+                    </div>
+
+                    <!-- SEGUNDO. Cesión de derechos -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title">
+                            <i class="bi bi-arrow-left-right"></i>
+                            SEGUNDO. Cesión de derechos
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>La Empresa cede al cliente los derechos de reproducción, distribución, comunicación pública y explotación de los textos entregados, conforme a la Ley Argentina de Propiedad Intelectual. Esta cesión será exclusiva para el cliente, y la Empresa no publicará los mismos textos de manera idéntica en otros proyectos o plataformas.</p>
+                        </div>
+                    </div>
+
+                    <!-- TERCERO. Protección de datos personales -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title">
+                            <i class="bi bi-person-badge"></i>
+                            TERCERO. Protección de datos personales
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>El cliente autoriza a la Empresa al tratamiento de sus datos personales, de acuerdo con la política de privacidad vigente. Los datos serán utilizados únicamente para la gestión del contrato, incluyendo presupuestos, formalización de pedidos, ejecución del servicio, facturación y atención al cliente. No serán cedidos a terceros, salvo obligación legal.</p>
+                        </div>
+                    </div>
+
+                    <!-- CUARTO. Duración y terminación del contrato -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title">
+                            <i class="bi bi-calendar-range"></i>
+                            CUARTO. Duración y terminación del contrato
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>El contrato tendrá vigencia indefinida mientras no sea denunciado por alguna de las partes. En caso de rescisión por el cliente, los servicios ya entregados no serán reembolsables. En caso de rescisión por la Empresa, esta deberá completar los trabajos encargados hasta ese momento.</p>
+                        </div>
+                    </div>
+
+                    <!-- QUINTO. Interrupción del servicio -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title">
+                            <i class="bi bi-power"></i>
+                            QUINTO. Interrupción del servicio
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>La Empresa no será responsable por interrupciones temporales o definitivas del servicio causadas por fuerza mayor, problemas técnicos o situaciones ajenas al control de la Empresa.</p>
+                        </div>
+                    </div>
+
+                    <!-- SEXTO. Régimen jurídico -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title">
+                            <i class="bi bi-building"></i>
+                            SEXTO. Régimen jurídico
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>El presente contrato tiene carácter mercantil. No existe relación laboral entre la Empresa y el cliente.</p>
+                        </div>
+                    </div>
+
+                    <!-- SÉPTIMO. Extinción del contrato y obligaciones -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title">
+                            <i class="bi bi-x-circle"></i>
+                            SÉPTIMO. Extinción del contrato y obligaciones
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>El contrato podrá extinguirse por incumplimiento de cualquiera de sus cláusulas o por causas generales del derecho argentino. En caso de extinción, se respetarán las obligaciones de pago de servicios ya recibidos y entregados.</p>
+                        </div>
+                    </div>
+
+                    <!-- OCTAVO. Revisión de trabajos por no conformidad -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title">
+                            <i class="bi bi-eye"></i>
+                            OCTAVO. Revisión de trabajos por no conformidad
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>El cliente podrá manifestar su no conformidad con los trabajos entregados en un plazo de 12 días. La Empresa evaluará la solicitud y realizará las correcciones necesarias o reasignará el trabajo a otro profesional calificado.</p>
+                        </div>
+                    </div>
+
+                    <!-- NOVENO. Obligaciones de la Empresa -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title">
+                            <i class="bi bi-building"></i>
+                            NOVENO. Obligaciones de la Empresa
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>La Empresa se compromete a ejecutar y entregar los trabajos en los tiempos acordados y a comunicar cualquier eventualidad que impida cumplir con los plazos. No será responsable de retrasos causados por falta de respuesta del cliente a solicitudes de información o aclaraciones.</p>
+                        </div>
+                    </div>
+
+                    <!-- DÉCIMO. Obligaciones del Cliente -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title">
+                            <i class="bi bi-person-check"></i>
+                            DÉCIMO. Obligaciones del Cliente
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>El cliente se compromete a:</p>
+                            <ul>
+                                <li>Realizar los pagos en los plazos establecidos.</li>
+                                <li>No contactar directamente a los tutores o personal de la Empresa para evitar conflictos en el servicio.</li>
+                                <li>Cumplir las normas de uso de la plataforma, los Términos y Condiciones y la Política de Privacidad.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- UNDÉCIMO. Condiciones generales de contratación y venta -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title">
+                            <i class="bi bi-cart-check"></i>
+                            UNDÉCIMO. Condiciones generales de contratación y venta
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>Toda compra realizada en TESIS CHALLENGE implica aceptación de estas condiciones, incluyendo pagos mediante transferencia, depósito, tarjeta de crédito o débito. La Empresa enviará factura detallada al cliente. El cliente podrá solicitar modificaciones en los textos entregados si no cumplen con los requisitos, las cuales serán evaluadas y gestionadas por el Departamento de Calidad de la Empresa.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="logo_png.png" alt="Tesis Challenge" class="footer-logo">
+                    <p class="footer-copyright">© 2026 Tesis Challenge</p>
+                </div>
+                <div class="footer-col">
+                    <ul class="footer-links">
+                        <li><a href="terminos.html" class="active">Términos y condiciones</a></li>
+                        <li><a href="politicas.html">Políticas de privacidad</a></li>
+                        <li><a href="condiciones.html">Condiciones generales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/tesischallenge/" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@tesischallenge" target="_blank" class="social-icon"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61576958244653" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/tesis-challenge-82471936b/" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <div class="whatsapp-float">
+        <button class="whatsapp-btn" id="whatsappBtn" aria-label="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // MOBILE MENU TOGGLE
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+                });
+            }
+            
+            const mobileLinks = document.querySelectorAll('.mobile-menu a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle?.classList.remove('active');
+                    mobileMenu?.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // HEADER SCROLL EFFECT
+            const header = document.querySelector('.header');
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        header.style.padding = '0.5rem 0';
+                        header.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                    } else {
+                        header.style.padding = '1rem 0';
+                        header.style.backgroundColor = 'transparent';
+                    }
+                });
+            }
+            
+            // ACTIVE NAV LINK
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-menu a');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && (currentPath.includes(href) || (currentPath === '/' && href === 'index.html'))) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // SCROLL REVEAL ANIMATION
+            const revealElements = document.querySelectorAll('.animate-on-scroll');
+            
+            function checkReveal() {
+                const windowHeight = window.innerHeight;
+                const revealThreshold = 100;
+                
+                revealElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top < windowHeight - revealThreshold) {
+                        element.classList.add('revealed');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', checkReveal);
+            checkReveal();
+            
+            // WHATSAPP BUTTONS
+            const whatsappBtns = document.querySelectorAll('.whatsapp-btn');
+            whatsappBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const links = ['https://wa.link/l7dzkm', 'https://wa.link/b9xgk5'];
+                    const randomLink = links[Math.floor(Math.random() * links.length)];
+                    window.open(randomLink, '_blank');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
