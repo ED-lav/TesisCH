@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <title>Tesis Challenge | Condiciones Generales</title>
+    <meta name="description" content="Condiciones generales de venta, entrega y devoluciones de Tesis Challenge. Conoce los términos de contratación de nuestros servicios.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tesischallenge.com/condiciones-generales.html">
+    <meta property="og:title" content="Tesis Challenge | Condiciones Generales">
+    <meta property="og:description" content="Condiciones generales de venta, entrega y devoluciones de Tesis Challenge.">
+    <meta property="og:image" content="https://www.tesischallenge.com/logo_preview.png">
+    
+    <link rel="icon" type="image/png" href="logo_png.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* ============================================
+           Tesis Challenge - Estilos Condiciones Generales
+           ============================================ */
+
+        :root {
+            --primary: #00A8FF;
+            --primary-dark: #005189;
+            --primary-light: #40C5FF;
+            --secondary: #1DB2FF;
+            --dark: #1e2939;
+            --dark-bg: #0a0a0a;
+            --white: #FFFFFF;
+            --gray-light: #F8F8F8;
+            --gray-medium: #E6E6E6;
+            --gray-dark: #4A4A4A;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+            --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.2);
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        @media (max-width: 768px) {
+            html { font-size: 14px; }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--dark);
+            line-height: 1.5;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 1rem; }
+        }
+
+        /* ============================================ */
+        /* HEADER Y NAVEGACIÓN */
+        /* ============================================ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, rgba(0, 168, 255, 0.9), rgba(0, 81, 137, 0.95));
+            backdrop-filter: blur(20px);
+            border-radius: 60px;
+            margin: 0 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 1.8rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--white);
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--white);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        .nav-link:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            width: 30px;
+            height: 24px;
+            background: transparent;
+            cursor: pointer;
+            border: none;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 76px;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(0, 168, 255, 0.98), rgba(0, 81, 137, 0.98));
+            backdrop-filter: blur(20px);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .mobile-menu a {
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 0.5rem;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .menu-toggle { display: flex; }
+        }
+
+        /* ============================================ */
+/* HERO CON IMAGEN DE FONDO */
+/* ============================================ */
+.legal-hero {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* IMAGEN DE FONDO */
+.legal-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('logo_png.png'); /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+/* OVERLAY OSCURO PARA LEGIBILIDAD DEL TEXTO */
+.legal-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+/* Contenido del hero */
+.legal-hero-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.legal-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0, 168, 255, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #40C5FF;
+    border: 1px solid rgba(64, 197, 255, 0.4);
+}
+
+.legal-hero-badge-dot {
+    width: 8px;
+    height: 8px;
+    background: #40C5FF;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+}
+
+.legal-hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.legal-hero-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .legal-hero { height: 40vh; min-height: 300px; }
+    .legal-hero-title { font-size: 2rem; }
+    .legal-hero-subtitle { font-size: 0.9rem; }
+    .legal-hero-badge { font-size: 0.75rem; padding: 0.4rem 1rem; margin-bottom: 1rem; }
+}
+
+
+        @media (max-width: 480px) {
+            .legal-hero-title { font-size: 1.5rem; }
+        }
+
+        /* ============================================ */
+        /* CONTENIDO LEGAL */
+        /* ============================================ */
+        .legal-content {
+            padding: 4rem 0;
+            background: var(--dark-bg);
+        }
+
+        .legal-wrapper {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .legal-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .legal-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .legal-section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .legal-section-title i {
+            font-size: 1.3rem;
+            color: var(--primary-light);
+        }
+
+        .legal-section-title.numbered {
+            font-size: 1.2rem;
+        }
+
+        .legal-section-content {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .legal-section-content p {
+            margin-bottom: 0.8rem;
+        }
+
+        .legal-section-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section-content ul {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin: 0.8rem 0;
+        }
+
+        .legal-section-content li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-section-content li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-light);
+        }
+
+        .legal-highlight {
+            color: var(--primary-light);
+            font-weight: 600;
+        }
+
+        .legal-note {
+            background: rgba(0, 168, 255, 0.1);
+            border-left: 3px solid var(--primary-light);
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .legal-wrapper { padding: 1.5rem; }
+            .legal-section-title { font-size: 1.1rem; }
+            .legal-section-title i { font-size: 1.1rem; }
+            .legal-section-content { font-size: 0.85rem; }
+        }
+
+        /* ============================================ */
+        /* FOOTER */
+        /* ============================================ */
+        .footer {
+            background: #000000;
+            padding: 3rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .footer-col {
+            flex: 1;
+        }
+
+        .footer-logo {
+            width: 70px;
+            height: auto;
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-copyright {
+            font-size: 0.75rem;
+            color: var(--gray-light);
+            opacity: 0.7;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-light);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 1.4rem;
+            color: white;
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                text-align: left;
+            }
+            .footer-links { justify-content: center; }
+            .footer-social { justify-content: flex-end; }
+        }
+
+        /* ============================================ */
+        /* WHATSAPP FLOTANTE */
+        /* ============================================ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn {
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+            animation: pulseWhatsapp 2s infinite;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        @keyframes pulseWhatsapp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        /* ============================================ */
+        /* ANIMACIONES */
+        /* ============================================ */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="logo_png.png" alt="Tesis Challenge" class="logo-img">
+                    <span class="logo-text">Tesis Challenge</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="quienes-somos.html" class="nav-link">Quiénes somos</a></li>
+                    <li><a href="preguntasfrecuentes.html" class="nav-link">Preguntas frecuentes</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog Académico</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                <li><a href="preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+                <li><a href="blog.html">Blog Académico</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- SECCIÓN 1: HERO -->
+        <section class="legal-hero">
+            <div class="legal-hero-bg"></div>
+            <div class="legal-hero-overlay"></div>
+            <div class="legal-hero-container">
+                <div class="legal-hero-badge animate-on-scroll">
+                    <span class="legal-hero-badge-dot"></span>
+                    <span>Términos de compra</span>
+                </div>
+                <h1 class="legal-hero-title animate-on-scroll">Condiciones Generales</h1>
+                <p class="legal-hero-subtitle animate-on-scroll">de Venta, Entrega y Devoluciones</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CONTENIDO -->
+        <section class="legal-content">
+            <div class="container">
+                <div class="legal-wrapper">
+
+                    <!-- 1. Alcance y aceptación -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-check-circle"></i>
+                            1. Alcance y aceptación
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>Estas condiciones generales se aplican a todas las ventas de servicios formativos realizadas en Argentina por <span class="legal-highlight">EXPOSANJUAN S.R.L.</span>, <span class="legal-highlight">CUIT: 30-71650848-6</span>, en adelante <span class="legal-highlight">TESIS CHALLENGE</span>, a personas físicas. Todo pedido implica la aceptación sin reservas de estas condiciones por parte del cliente. La aceptación se extiende a pedidos futuros, salvo que TESIS CHALLENGE notifique cambios previos. La falta de aplicación puntual de estas condiciones no constituirá renuncia a su cumplimiento en el futuro.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Ley aplicable y jurisdicción -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-gavel"></i>
+                            2. Ley aplicable y jurisdicción
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>Estas condiciones se regirán por la legislación argentina. Para cualquier disputa derivada de las mismas, las partes se someten a los tribunales competentes del domicilio de la empresa.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Precios -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-tag"></i>
+                            3. Precios
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>Los precios de TESIS CHALLENGE se expresan en <span class="legal-highlight">pesos argentinos (ARS)</span>, incluyen el IVA vigente y se aplican salvo error tipográfico. Cambios en la tasa de IVA se reflejarán automáticamente en los precios publicados.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Formas de pago -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-credit-card"></i>
+                            4. Formas de pago
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>El cliente podrá abonar los servicios mediante:</p>
+                            <ul>
+                                <li>Depósito o transferencia bancaria</li>
+                                <li>Tarjeta de crédito o débito</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 5. Entrega de servicios -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-envelope-paper"></i>
+                            5. Entrega de servicios
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>Los servicios se prestarán de forma telefónica y/o mediante entrega de materiales digitales al correo electrónico proporcionado por el cliente. La empresa realizará las correcciones solicitadas según las pautas indicadas por el cliente, dentro de un plazo mínimo de <span class="legal-highlight">4 días hábiles</span>. Solicitudes que impliquen cambios sustanciales podrán generar un nuevo presupuesto. Cada entrega será considerada completada al momento de recibir el pago correspondiente y el envío del material.</p>
+                        </div>
+                    </div>
+
+                    <!-- 6. Correcciones y revisiones -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-arrow-repeat"></i>
+                            6. Correcciones y revisiones
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>El cliente podrá solicitar revisiones sobre el material recibido en un plazo de hasta <span class="legal-highlight">14 días</span> desde la entrega, siempre que estas correspondan a lo acordado inicialmente. Modificaciones que introduzcan nuevos contenidos o cambios estructurales estarán sujetas a un nuevo presupuesto.</p>
+                        </div>
+                    </div>
+
+                    <!-- 7. Cancelaciones y devoluciones -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-x-circle"></i>
+                            7. Cancelaciones y devoluciones
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>Se concede derecho a la cancelación del servicio en un plazo de <span class="legal-highlight">48 horas</span> desde la contratación, descontando gastos de gestión si corresponde. Pasado ese periodo, la devolución solo aplica si los servicios no se ajustan a lo estipulado inicialmente. Todo material entregado es original y exclusivo para el cliente; no puede ser revendido.</p>
+                        </div>
+                    </div>
+
+                    <!-- 8. Obligaciones del cliente -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-person-check"></i>
+                            8. Obligaciones del cliente
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>El cliente se compromete a:</p>
+                            <ul>
+                                <li>Proporcionar información completa y veraz para la prestación del servicio</li>
+                                <li>Realizar los pagos según lo acordado</li>
+                                <li>No utilizar los materiales entregados para obtener beneficios económicos externos</li>
+                                <li>Respetar las normas de uso de la plataforma y las políticas de TESIS CHALLENGE</li>
+                            </ul>
+                            <p>El cliente acepta todo el proceso para la elaboración del proyecto y los pasos posteriores a tal fin.</p>
+                        </div>
+                    </div>
+
+                    <!-- 9. Uso responsable de los materiales -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-file-earmark-text"></i>
+                            9. Uso responsable de los materiales
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>Los documentos, formaciones y materiales entregados son únicamente de carácter formativo. La empresa no se responsabiliza del uso inapropiado o indebido de dichos materiales por parte del cliente.</p>
+                        </div>
+                    </div>
+
+                    <!-- 10. Contacto y soporte -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-chat-dots"></i>
+                            10. Contacto y soporte
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>Cualquier contacto adicional con el profesional responsable del proyecto deberá realizarse por escrito a la dirección de correo donde lo proporciona, dejando constancia de las necesidades y requerimientos. Las llamadas telefónicas solo se realizarán en casos excepcionales previamente justificados.</p>
+                        </div>
+                    </div>
+
+                    <!-- 11. Entrega y pago de entregas intermedias -->
+                    <div class="legal-section animate-on-scroll">
+                        <h2 class="legal-section-title numbered">
+                            <i class="bi bi-calendar-check"></i>
+                            11. Entrega y pago de entregas intermedias
+                        </h2>
+                        <div class="legal-section-content">
+                            <p>Para proyectos que requieran entregas parciales, el cliente dispondrá de <span class="legal-highlight">24-48 horas</span> tras cada entrega para realizar el pago correspondiente, permitiendo la continuación del servicio.</p>
+                            <div class="legal-note">
+                                <i class="bi bi-envelope"></i> Para cualquier consulta sobre estas condiciones, puedes escribirnos a <span class="legal-highlight">soporte@tesischallenge.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="logo_png.png" alt="Tesis Challenge" class="footer-logo">
+                    <p class="footer-copyright">© 2026 Tesis Challenge</p>
+                </div>
+                <div class="footer-col">
+                    <ul class="footer-links">
+                        <li><a href="terminos.html">Términos y condiciones</a></li>
+                        <li><a href="politicas.html">Políticas de privacidad</a></li>
+                        <li><a href="condiciones.html" class="active">Condiciones generales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/tesischallenge/" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@tesischallenge" target="_blank" class="social-icon"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61576958244653" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/tesis-challenge-82471936b/" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <div class="whatsapp-float">
+        <button class="whatsapp-btn" id="whatsappBtn" aria-label="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // MOBILE MENU TOGGLE
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+                });
+            }
+            
+            const mobileLinks = document.querySelectorAll('.mobile-menu a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle?.classList.remove('active');
+                    mobileMenu?.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // HEADER SCROLL EFFECT
+            const header = document.querySelector('.header');
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        header.style.padding = '0.5rem 0';
+                        header.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                    } else {
+                        header.style.padding = '1rem 0';
+                        header.style.backgroundColor = 'transparent';
+                    }
+                });
+            }
+            
+            // ACTIVE NAV LINK
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-menu a');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && (currentPath.includes(href) || (currentPath === '/' && href === 'index.html'))) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // SCROLL REVEAL ANIMATION
+            const revealElements = document.querySelectorAll('.animate-on-scroll');
+            
+            function checkReveal() {
+                const windowHeight = window.innerHeight;
+                const revealThreshold = 100;
+                
+                revealElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top < windowHeight - revealThreshold) {
+                        element.classList.add('revealed');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', checkReveal);
+            checkReveal();
+            
+            // WHATSAPP BUTTONS
+            const whatsappBtns = document.querySelectorAll('.whatsapp-btn');
+            whatsappBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const links = ['https://wa.link/l7dzkm', 'https://wa.link/b9xgk5'];
+                    const randomLink = links[Math.floor(Math.random() * links.length)];
+                    window.open(randomLink, '_blank');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
