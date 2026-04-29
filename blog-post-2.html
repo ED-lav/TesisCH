@@ -557,9 +557,12 @@
         }
 
         .cta-final-container {
-            max-width: 100%;
-            margin: 0 auto;
-        }
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
         .cta-final-image {
             margin-bottom: 1.5rem;
@@ -1133,7 +1136,7 @@
             whatsappBtns.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const links = ['https://wa.link/l7dzkm', 'https://wa.link/b9xgk5'];
+                    const links = ['https://wa.link/b9xgk5', 'https://wa.link/b9xgk5'];
                     const randomLink = links[Math.floor(Math.random() * links.length)];
                     window.open(randomLink, '_blank');
                 });
