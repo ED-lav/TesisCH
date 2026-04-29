@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
-    <title>Tesis Challenge | Próximamente</title>
-    <meta name="description" content="Estamos trabajando en esta página. Pronto estará disponible.">
+    <title>Tesis Challenge | ¿Qué saber para citar en normas APA en tu tesis?</title>
+    <meta name="description" content="Descubre todo lo esencial que necesitas saber para citar correctamente en tu tesis o monografía con normas APA. Guía práctica con ejemplos claros.">
     
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.tesischallenge.com/">
-    <meta property="og:title" content="Tesis Challenge | Próximamente">
-    <meta property="og:description" content="Estamos trabajando en esta página. Pronto estará disponible.">
-    <meta property="og:image" content="https://www.tesischallenge.com/logo_preview.png">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.tesischallenge.com/blog-post-5.html">
+    <meta property="og:title" content="¿Qué saber para citar en normas APA en tu tesis?">
+    <meta property="og:description" content="Descubre todo lo esencial que necesitas saber para citar correctamente en tu tesis o monografía con normas APA.">
+    <meta property="og:image" content="https://www.tesischallenge.com/5.png">
     
     <link rel="icon" type="image/png" href="logo_png.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -18,7 +18,8 @@
     
     <style>
         /* ============================================
-           Tesis Challenge - Estilos Página En Construcción
+           Tesis Challenge - Estilos Blog Post
+           VERSIÓN CORREGIDA - BOTONES VERTICALES EN PC
            ============================================ */
 
         :root {
@@ -59,14 +60,13 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--dark);
+            background-color: #335a79;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             line-height: 1.5;
             overflow-x: hidden;
             width: 100%;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
         .container {
@@ -245,143 +245,433 @@
         }
 
         /* ============================================ */
-        /* SECCIÓN PRINCIPAL - EN CONSTRUCCIÓN */
+        /* BLOG POST LAYOUT - SIN CATÁLOGO */
         /* ============================================ */
-        .main-content {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 8rem 1.5rem 4rem;
-            background: linear-gradient(135deg, #0a2a3a 0%, #001a2a 100%);
-            position: relative;
-            overflow: hidden;
+        .blog-post {
+            padding: 8rem 0 4rem;
         }
 
-        .main-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        /* CONTENIDO PRINCIPAL - OCUPA TODO EL ANCHO */
+        .blog-content {
             width: 100%;
-            height: 100%;
-            background-image: url('fondo_1.png');
-            background-repeat: repeat;
-            background-size: auto;
-            opacity: 0.05;
-            pointer-events: none;
-        }
-
-        .construction-wrapper {
-            text-align: center;
-            max-width: 700px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
-            z-index: 1;
         }
 
-        .construction-icon {
-            margin-bottom: 2rem;
-            animation: float 3s ease-in-out infinite;
+        /* Botones: en PC apilados verticalmente a la izquierda */
+        .buttons-sidebar {
+            position: absolute;
+            left: -180px;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 160px;
         }
 
-        .construction-icon i {
-            font-size: 5rem;
-            color: var(--primary-light);
-            background: rgba(0, 168, 255, 0.15);
-            padding: 1.5rem;
-            border-radius: 2rem;
-            display: inline-block;
-        }
-
-        .construction-badge {
+        .back-button, .view-all-button {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 0.5rem;
-            background: rgba(0, 168, 255, 0.25);
-            backdrop-filter: blur(10px);
-            padding: 0.5rem 1.2rem;
+            background: rgba(0, 168, 255, 0.15);
+            border: 1px solid rgba(0, 168, 255, 0.3);
             border-radius: 2rem;
+            padding: 0.6rem 1rem;
+            color: var(--primary-light);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .back-button:hover, .view-all-button:hover {
+            background: rgba(0, 168, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* En móvil: botones centrados horizontalmente */
+        .buttons-mobile {
+            display: none;
+            gap: 1rem;
             margin-bottom: 1.5rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #40C5FF;
-            border: 1px solid rgba(64, 197, 255, 0.4);
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        .construction-badge-dot {
-            width: 8px;
-            height: 8px;
-            background: #40C5FF;
-            border-radius: 50%;
-            display: inline-block;
-            animation: pulse 1.5s infinite;
-        }
-
-        .construction-title {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--white);
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-            letter-spacing: -0.02em;
-        }
-
-        .construction-message {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.85);
+        .post-header {
             margin-bottom: 2rem;
-            line-height: 1.6;
+            text-align: center;
         }
 
-        .construction-message strong {
+        .post-category {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            background: rgba(0, 168, 255, 0.2);
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+        }
+
+        .post-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .post-image-main {
+            border-radius: 1.5rem;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .post-image-main img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Autor */
+        .post-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .author-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--primary-light);
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Contenido del artículo */
+        .post-content {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .post-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .post-content h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin: 1.2rem 0 0.8rem;
+        }
+
+        .post-content p {
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .post-content ul, .post-content ol {
+            color: #444;
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .post-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .post-content .highlight {
+            color: var(--primary-light);
+            font-weight: 600;
+        }
+
+        /* ============================================ */
+        /* ANUNCIOS RESPONSIVE - PROFESIONAL */
+        /* ============================================ */
+        .ad-gif {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(0, 168, 255, 0.05);
+            border-radius: 1rem;
+            border: 1px solid rgba(0, 168, 255, 0.2);
+        }
+
+        .ad-gif video,
+        .ad-gif img {
+            max-width: 100%;
+            border-radius: 0.5rem;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .ad-gif p {
+            margin-top: 0.8rem;
+            margin-bottom: 0;
+            font-size: 0.85rem;
             color: var(--primary-light);
         }
 
-        .btn-back-home {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border: none;
-            border-radius: 3rem;
-            padding: 0.8rem 2rem;
-            color: white;
-            font-size: 1rem;
-            font-weight: 600;
+        /* Desktop: solo video, imagen oculta (no ocupa espacio) */
+        @media (min-width: 769px) {
+            .ad-gif .mobile-ad {
+                display: none;
+            }
+            .ad-gif video {
+                max-height: 300px;
+                width: auto;
+            }
+        }
+
+        /* Móvil: solo imagen, video oculto (no ocupa espacio) */
+        @media (max-width: 768px) {
+            .ad-gif .desktop-ad {
+                display: none;
+            }
+            .ad-gif img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        /* Carrusel de publicaciones */
+        .related-posts {
+            margin-top: 3rem;
+        }
+
+        .related-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 1rem;
+        }
+
+        .carousel-slide {
+            flex: 0 0 calc(33.333% - 0.67rem);
             cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-slide:hover {
+            transform: scale(1.02);
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            border-radius: 1rem;
+            display: block;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
             transition: all 0.3s ease;
-            text-decoration: none;
-            margin-top: 1rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .btn-back-home:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        .carousel-btn:hover {
+            background: var(--primary);
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+        .carousel-prev {
+            left: 10px;
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.2); }
+        .carousel-next {
+            right: 10px;
+        }
+
+        @media (max-width: 1024px) {
+            .carousel-slide {
+                flex: 0 0 calc(50% - 0.5rem);
+            }
         }
 
         @media (max-width: 768px) {
-            .construction-title { font-size: 2rem; }
-            .construction-message { font-size: 1rem; }
-            .construction-icon i { font-size: 3.5rem; padding: 1rem; }
-            .btn-back-home { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
+            .carousel-slide {
+                flex: 0 0 100%;
+            }
+        }
+
+        /* ============================================ */
+        /* SECCIÓN CTA FINAL - IMAGEN MÁS GRANDE */
+        /* ============================================ */
+        .cta-final-section {
+            width: 100%;
+            margin: 3rem 0 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #d4eaf7, #b8d9f0);
+            border-radius: 1.5rem;
+            text-align: center;
+        }
+
+        .cta-final-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+        .cta-final-image {
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-final-image img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            display: inline-block;
+            border-radius: 1rem;
+        }
+
+        /* Botón de WhatsApp redondo */
+        .cta-whatsapp-circle {
+            width: 70px;
+            height: 70px;
+            background: #25D366;
+            border: none;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
+
+        .cta-whatsapp-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .cta-whatsapp-circle i {
+            font-size: 2.2rem;
+            color: white;
+        }
+
+        /* ============================================ */
+        /* RESPONSIVE - MÓVIL */
+        /* ============================================ */
+        @media (max-width: 1024px) {
+            .buttons-sidebar {
+                position: static;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+            .buttons-sidebar .back-button,
+            .buttons-sidebar .view-all-button {
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-post {
+                padding: 7rem 0 3rem;
+            }
+            .post-title {
+                font-size: 1.6rem;
+            }
+            .post-content {
+                padding: 1.2rem;
+            }
+            .post-content h2 {
+                font-size: 1.3rem;
+            }
+            .post-content h3 {
+                font-size: 1.1rem;
+            }
+            .post-content p {
+                font-size: 0.9rem;
+            }
+            .buttons-sidebar {
+                gap: 0.8rem;
+            }
+            .back-button, .view-all-button {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.75rem;
+            }
+            .cta-final-section {
+                margin: 2rem 0 0;
+                padding: 1.5rem;
+            }
+            .cta-final-image img {
+                max-width: 280px;
+            }
+            .cta-whatsapp-circle {
+                width: 60px;
+                height: 60px;
+            }
+            .cta-whatsapp-circle i {
+                font-size: 1.8rem;
+            }
         }
 
         @media (max-width: 480px) {
-            .construction-title { font-size: 1.6rem; }
-            .construction-message { font-size: 0.9rem; }
+            .cta-final-image img {
+                max-width: 220px;
+            }
+            .cta-whatsapp-circle {
+                width: 55px;
+                height: 55px;
+            }
+            .cta-whatsapp-circle i {
+                font-size: 1.6rem;
+            }
         }
 
         /* ============================================ */
@@ -391,6 +681,7 @@
             background: #000000;
             padding: 3rem 0 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
         }
 
         .footer-grid {
@@ -527,7 +818,7 @@
                     <li><a href="index.html" class="nav-link">Inicio</a></li>
                     <li><a href="quienes-somos.html" class="nav-link">Quiénes somos</a></li>
                     <li><a href="preguntasfrecuentes.html" class="nav-link">Preguntas frecuentes</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog Académico</a></li>
+                    <li><a href="blog.html" class="nav-link active"> Blog Académico</a></li>
                 </ul>
                 <button class="menu-toggle" id="menuToggle" aria-label="Menú">
                     <span></span>
@@ -541,29 +832,163 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="quienes-somos.html">Quiénes somos</a></li>
                 <li><a href="preguntasfrecuentes.html">Preguntas frecuentes</a></li>
-                <li><a href="blog.html">Blog Académico</a></li>
+                <li><a href="blog.html" class="active">Blog Academico</a></li>
             </ul>
         </div>
     </header>
 
-    <main class="main-content">
+    <main class="blog-post">
         <div class="container">
-            <div class="construction-wrapper">
-                <div class="construction-icon">
-                    <i class="bi bi-hammer"></i>
+            <div class="blog-content">
+                
+                <!-- Botones: en PC apilados verticalmente a la izquierda -->
+                <div class="buttons-sidebar">
+                    <a href="blogs.html" class="back-button">
+                        <i class="bi bi-arrow-left"></i>
+                        Volver al inicio
+                    </a>
+                    <a href="blogs.html" >
+                    </a>
                 </div>
-                <div class="construction-badge">
-                    <span class="construction-badge-dot"></span>
-                    <span>Próximamente</span>
+
+                <div class="post-header">
+                    <span class="post-category">Normas APA</span>
+                    <h1 class="post-title">¿Qué saber para citar en normas APA en tu tesis?</h1>
                 </div>
-                <h1 class="construction-title">Aún estamos trabajando en esta página</h1>
-                <p class="construction-message">
-                    <strong>¡Visítala muy pronto!</strong> Estamos preparando contenido exclusivo para ayudarte a alcanzar tus metas académicas.
-                </p>
-                <a href="index.html" class="btn-back-home">
-                    <i class="bi bi-house-door-fill"></i>
-                    Volver al inicio
-                </a>
+
+                <div class="post-image-main">
+                    <img src="t5.png" alt="¿Qué saber para citar en normas APA en tu tesis?">
+                </div>
+
+                <!-- Autor -->
+                <div class="post-author">
+                    <div class="author-avatar">
+                        <img src="ursula-nueva.jpg.png" alt="Ursula Bellini">
+                    </div>
+                    <div class="author-info">
+                        <h3>Ursula Bellini</h3>
+                        <p>Especialista en metodología de investigación</p>
+                    </div>
+                </div>
+
+                <!-- Contenido del artículo -->
+                <div class="post-content">
+                    <p>Si estás haciendo tu tesis, sabes que uno de los puntos que más complica a los estudiantes son las normas APA.</p>
+
+                    <p>Muchos se frustran al intentar entender cómo citar correctamente, qué va entre comillas, qué va en cursiva o cómo armar la bibliografía.</p>
+
+                    <p>Pero no te preocupes: citar con APA no es tan difícil como parece, solo requiere conocer algunas reglas básicas y aplicarlas de formas constante.</p>
+
+                    <p>En esta guía vas a encontrar todo lo esencial que necesitas saber para citar correctamente en tu tesis o monografía, sin enredos y con ejemplos claros.</p>
+
+                    <h2>¿Qué son las normas APA?</h2>
+                    <p>Las normas APA fueron creadas por la American Psychological Association para unificar el estilo de presentación de trabajos académicos. Su objetivo es que cualquier lector pueda identificar fácilmente de donde proviene la información que usas. Hoy en día, es el formato más utilizado en universidades de todo el mundo.</p>
+
+                    <!-- PRIMER ANUNCIO - Video en desktop, imagen en móvil (sin espacios vacíos) -->
+                    <div class="ad-gif">
+                        <video class="desktop-ad" autoplay loop muted playsinline>
+                            <source src="gif1.mp4" type="video/mp4">
+                        </video>
+                        <img class="mobile-ad" src="anuncio1.png" alt="Asesoría Tesis Challenge">
+                        
+                    </div>
+
+                    <h2>¿Por qué es tan importante citar?</h2>
+                    <p>Citar correctamente demuestra honestidad académica, respeta el trabajo de otros autores y evita el plagio. Además, le da credibilidad a tu tesis y permite que los evaluadores verifiquen tus fuentes.</p>
+
+                    <h2>Tipos de citas en normas APA</h2>
+                    <p>Existen dos formas principales de citar dentro del texto:</p>
+                    <h3>Cita directa</h3>
+                    <p>Reproducís literalmente las palabras de un autor. Debe ir entre comillas si tiene menos de 40 palabras. Ejemplo: Según Pérez (2022), "La motivación académica se relaciona directamente con el entorno institucional" (p. 35). Si tiene más de 40 palabras, se coloca en un párrafo aparte, sin comillas y con sangría.</p>
+                    <h3>Citas indirecta o paráfrasis</h3>
+                    <p>Usás la idea de otro autor, pero con tus propias palabras. Ejemplo: La motivación de los estudiantes suele depender de la calidad del ambiente educativo (Perez, 2022).</p>
+
+                    <h2>Cómo citar dentro del texto</h2>
+                    <p>El formato básico es: (Apellido, año). Si mencionas al autor en la frase, el año va entre paréntesis: Según Lopez (2021)… Si no lo mencionas directamente: El liderazgo transformacional mejora el rendimiento laboral (Lopez, 2021).</p>
+
+                    <h2>Cómo armar la bibliografía</h2>
+                    <p>Al final de tu tesis o monografía, todas las fuentes deben figurar en la lista de referencias. Cada tipo de fuente se cita de una manera particular:</p>
+                    <h3>Libro</h3>
+                    <p>Apellido, N. (Año). <em>Título del libro en cursiva</em>. Editorial</p>
+                    <h3>Artículo académico:</h3>
+                    <p>Apellido, N. (Año). Título del artículo. <em>Nombre de la revista</em>, volumen (número), páginas.</p>
+                    <h3>Sitio web:</h3>
+                    <p>Apellido, N. (Año). Título del artículo o página. <em>Nombre del sitio web</em>. URL</p>
+
+                    <h2>Detalles que marcan la diferencia</h2>
+                    <ul>
+                        <li>Usá sangría francesa en la lista de referencia</li>
+                        <li>Ordená alfabéticamente por apellido del autor.</li>
+                        <li>Si una obra tiene más de un autor, usá "&" antes del último apellido.</li>
+                        <li>No uses viñetas ni numeración.</li>
+                    </ul>
+
+                    <h2>Errores comunes al usar APA</h2>
+                    <p>Omitir el año o las páginas en las citas. Escribir los nombres de los autores completos en lugar de solo el apellido. No coincidir entre las citas del texto y la lista de referencias. Evitar estos errores mejora muchísimo la calidad de tu trabajo final.</p>
+
+                    <h2>Herramientas que pueden ayudarte</h2>
+                    <p>Existen generadores automáticos de citas APA (Como Scribbr, Cite This For Me o Zotero), pero siempre revisa los resultados, ya que suelen tener errores menores. Lo mejor es conocer las reglas básicas para verificar que esté todo bien.</p>
+
+                    <h2>Aplicar APA desde el principio te ahorra tiempo</h2>
+                    <p>Muchos estudiantes dejan las citas para el final y después pasan horas corrigiendo. Lo ideal es aplicar las normas desde el primer borrador de tu tesis o monografía.</p>
+
+                    <!-- SEGUNDO ANUNCIO - Video en desktop, imagen en móvil (sin espacios vacíos) -->
+                    <div class="ad-gif">
+                        <video class="desktop-ad" autoplay loop muted playsinline>
+                            <source src="gif2.mp4" type="video/mp4">
+                        </video>
+                        <img class="mobile-ad" src="anuncio2.png" alt="Tesis Challenge">
+                       
+                    </div>
+
+                    <h2>No te obsesiones: lo importante es la coherencia</h2>
+                    <p>Las normas APA cambian con los años, pero lo más importante es mantener consistencia: Si usas un formato, repetilo igual en todo el trabajo. Dominar las normas APA es una parte esencial de hacer una tesis profesional. Citar correctamente demuestra tu compromiso con la investigación y eleva el nivel académico de tu trabajo.</p>
+
+                    <p><strong class="highlight">Si querés asegurarte de aplicar las normas sin errores, en Tesis Challenge contamos con especialistas que te ayudan a revisar y formatear tu tesis o monografía según las normas APA más actualizadas.</strong></p>
+                </div>
+
+                <!-- Carrusel de publicaciones relacionadas -->
+                <div class="related-posts">
+                    <h3 class="related-title">Artículos relacionados</h3>
+                    <div class="carousel-container">
+                        <button class="carousel-btn carousel-prev" id="prevBtn">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <div class="carousel-track" id="carouselTrack">
+                            <div class="carousel-slide" data-id="1">
+                                <img src="t1.png" alt="10 tips para tu tesis">
+                            </div>
+                            <div class="carousel-slide" data-id="2">
+                                <img src="t2.png" alt="Cómo elegir el tema perfecto">
+                            </div>
+                            <div class="carousel-slide" data-id="3">
+                                <img src="t3.png" alt="¿Cómo hacer que tu tesis sea exitosa?">
+                            </div>
+                            <div class="carousel-slide" data-id="4">
+                                <img src="t4.png" alt="Puntos importantes para tu monografía">
+                            </div>
+                            <div class="carousel-slide" data-id="6">
+                                <img src="t6.png" alt="10 pasos para tu tesis">
+                            </div>
+                        </div>
+                        <button class="carousel-btn carousel-next" id="nextBtn">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN CTA FINAL -->
+                <div class="cta-final-section">
+                    <div class="cta-final-container">
+                        <div class="cta-final-image">
+                            <img src="b1.png" alt="¿Necesitas ayuda con tu tesis?">
+                        </div>
+                        <button class="cta-whatsapp-circle whatsapp-btn">
+                            <i class="bi bi-whatsapp"></i>
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
@@ -640,22 +1065,75 @@
                 });
             }
             
-            // ACTIVE NAV LINK
-            const currentPath = window.location.pathname;
-            const navLinks = document.querySelectorAll('.nav-link, .mobile-menu a');
-            navLinks.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href && (currentPath.includes(href) || (currentPath === '/' && href === 'index.html'))) {
-                    link.classList.add('active');
+            // CARRUSEL
+            const track = document.getElementById('carouselTrack');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            let currentIndex = 0;
+            let slidesPerView = 3;
+            
+            function updateSlidesPerView() {
+                if (window.innerWidth <= 768) {
+                    slidesPerView = 1;
+                } else if (window.innerWidth <= 1024) {
+                    slidesPerView = 2;
+                } else {
+                    slidesPerView = 3;
                 }
+                updateCarousel();
+            }
+            
+            function updateCarousel() {
+                if (slides.length === 0) return;
+                const slideWidth = slides[0].offsetWidth;
+                const gap = 16;
+                const newPosition = -currentIndex * (slideWidth + gap);
+                track.style.transform = `translateX(${newPosition}px)`;
+            }
+            
+            function nextSlide() {
+                if (currentIndex + slidesPerView < slides.length) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            }
+            
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            }
+            
+            if (prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', prevSlide);
+                nextBtn.addEventListener('click', nextSlide);
+            }
+            
+            window.addEventListener('resize', () => {
+                updateSlidesPerView();
+                currentIndex = 0;
+                updateCarousel();
+            });
+            
+            updateSlidesPerView();
+            
+            // Redirigir al hacer clic en una slide del carrusel
+            document.querySelectorAll('.carousel-slide').forEach(slide => {
+                slide.addEventListener('click', () => {
+                    const id = slide.dataset.id;
+                    window.location.href = `blog-post-${id}.html`;
+                });
             });
             
             // WHATSAPP BUTTONS
-            const whatsappBtns = document.querySelectorAll('.whatsapp-btn');
+            const whatsappBtns = document.querySelectorAll('.whatsapp-btn, .cta-whatsapp-circle');
             whatsappBtns.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const links = ['https://wa.link/l7dzkm', 'https://wa.link/b9xgk5'];
+                    const links = ['https://wa.link/b9xgk5', 'https://wa.link/b9xgk5'];
                     const randomLink = links[Math.floor(Math.random() * links.length)];
                     window.open(randomLink, '_blank');
                 });
