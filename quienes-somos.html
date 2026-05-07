@@ -246,59 +246,37 @@
         }
 
         /* ============================================ */
-        /* HERO QUIÉNES SOMOS */
+        /* SECCIÓN 1: HERO - QUIÉNES SOMOS */
         /* ============================================ */
         .page-hero {
-    position: relative;
-    width: 100%;
-    min-height: 500px;
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin-top: 0;
-    padding-top: 0;
-}
+            position: relative;
+            width: 100%;
+            min-height: 500px;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 0;
+            padding-top: 0;
+        }
 
-        .page-hero-img {
+        .page-hero-picture {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: center;
             z-index: 0;
         }
-        /* Contenedor picture para imágenes responsivas */
-.page-hero-picture {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
 
-.page-hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-/* Overlay oscuro para contraste del texto */
-.page-hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.55);
-    z-index: 1;
-}
+        .page-hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
 
         .page-hero-overlay {
             position: absolute;
@@ -325,30 +303,6 @@
             margin: 0 auto;
         }
 
-        .page-hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(0, 168, 255, 0.25);
-            backdrop-filter: blur(10px);
-            padding: 0.5rem 1.2rem;
-            border-radius: 2rem;
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #40C5FF;
-            border: 1px solid rgba(64, 197, 255, 0.4);
-        }
-
-        .badge-dot {
-            width: 8px;
-            height: 8px;
-            background: #40C5FF;
-            border-radius: 50%;
-            display: inline-block;
-            animation: pulse 1.5s infinite;
-        }
-
         .page-hero-title {
             font-size: 3.5rem;
             font-weight: 800;
@@ -369,240 +323,56 @@
             line-height: 1.5;
         }
 
-        /* Tablets (768px - 1024px) */
-@media (max-width: 1024px) {
-    .page-hero {
-        height: 70vh;
-        min-height: 450px;
-    }
-    .page-hero-title {
-        font-size: 2.8rem;
-    }
-    .page-hero-subtitle {
-        font-size: 1.1rem;
-    }
-}
-
-/* Móviles (hasta 768px) - aquí se aplica who-mobile.png */
-@media (max-width: 768px) {
-    .page-hero {
-        height: 60vh;
-        min-height: 400px;
-    }
-    
-    /* Ajuste de posición de la imagen en móvil */
-    .page-hero-img {
-        object-position: 50% 30%;
-    }
-    
-    .page-hero-title {
-        font-size: 2.2rem;
-    }
-    
-    .page-hero-subtitle {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
-    
-    .page-hero-badge {
-        font-size: 0.8rem;
-        padding: 0.4rem 1rem;
-        margin-bottom: 1rem;
-    }
-}
-
-/* Móviles pequeños (hasta 576px) */
-@media (max-width: 576px) {
-    .page-hero {
-        height: 50vh;
-        min-height: 350px;
-    }
-    
-    .page-hero-img {
-        object-position: 50% 20%;
-    }
-    
-    .page-hero-title {
-        font-size: 1.8rem;
-    }
-    
-    .page-hero-subtitle {
-        font-size: 0.85rem;
-    }
-}
-
-/* Ajuste para pantallas muy pequeñas (hasta 400px) */
-@media (max-width: 400px) {
-    .page-hero {
-        height: 45vh;
-        min-height: 300px;
-    }
-    
-    .page-hero-title {
-        font-size: 1.5rem;
-    }
-    
-    .page-hero-subtitle {
-        font-size: 0.75rem;
-    }
-}
-
-        /* ============================================ */
-        /* MISIÓN, VISIÓN Y VALORES */
-        /* ============================================ */
-        .mission-vision {
-            padding: 5rem 0;
-            background: linear-gradient(165deg, #0a2a3a 0%, #001a2a 100%);
+        @media (max-width: 1024px) {
+            .page-hero { height: 70vh; min-height: 450px; }
+            .page-hero-title { font-size: 2.8rem; }
         }
-
-        .mv-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .mv-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 1.5rem;
-            padding: 2rem;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .mv-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary-light);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .mv-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-
-        .mv-icon i { font-size: 2rem; color: white; }
-        .mv-card h2 { font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; }
-        .mv-card p { color: rgba(255, 255, 255, 0.7); line-height: 1.6; }
-
-        @media (max-width: 768px) { .mv-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
-
-        /* ============================================ */
-        /* ESTADÍSTICAS */
-        /* ============================================ */
-        .stats {
-            padding: 4rem 0;
-            background: linear-gradient(165deg, #0a2a3a 0%, #001a2a 100%);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .stats-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 4rem;
-            flex-wrap: wrap;
-        }
-
-        .stat-card {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary-light);
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .stat-divider {
-            width: 2px;
-            height: 60px;
-            background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-        }
-
         @media (max-width: 768px) {
-            .stats-grid { gap: 2rem; }
-            .stat-divider { display: none; }
-            .stat-number { font-size: 2.5rem; }
+            .page-hero { height: 60vh; min-height: 400px; }
+            .page-hero-title { font-size: 2.2rem; }
+            .page-hero-subtitle { font-size: 1rem; }
+        }
+        @media (max-width: 576px) {
+            .page-hero { height: 50vh; min-height: 350px; }
+            .page-hero-title { font-size: 1.8rem; }
         }
 
         /* ============================================ */
-        /* HISTORIA */
+        /* SECCIÓN 2: IMAGEN GRANDE */
         /* ============================================ */
-        .history {
+        .image-showcase-section {
             padding: 5rem 0;
-            background: var(--dark-bg);
+            background: linear-gradient(165deg, #0a2a3a 0%, #001a2a 100%);
         }
 
-        .history-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
+        .countries-image {
+            text-align: center;
         }
 
-        .history-image {
-            flex: 1;
-            position: relative;
-            border-radius: 1.5rem;
-            overflow: hidden;
-        }
-
-        .history-image img {
+        .countries-image img {
             width: 100%;
+            max-width: 100%;
             height: auto;
             border-radius: 1.5rem;
+            box-shadow: var(--shadow-xl);
+            transition: transform 0.3s ease;
         }
 
-        .history-image-badge {
-            position: absolute;
-            bottom: 1rem;
-            left: 1rem;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 2rem;
-            padding: 0.5rem 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: white;
-            font-size: 0.85rem;
-        }
-
-        .history-content { flex: 1; }
-        .history-content h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--white); }
-        .history-content h2 .highlight { color: var(--primary-light); }
-        .history-content p { color: rgba(255, 255, 255, 0.7); line-height: 1.6; margin-bottom: 1rem; }
-
-        @media (max-width: 768px) {
-            .history-wrapper { flex-direction: column; gap: 2rem; }
-            .history-content h2 { font-size: 1.8rem; }
+        .countries-image img:hover {
+            transform: scale(1.01);
         }
 
         /* ============================================ */
-        /* EQUIPO */
+        /* SECCIÓN 3: PRESENCIA GLOBAL + BOTONES */
         /* ============================================ */
-        .team {
+        .presencia-section {
             padding: 5rem 0;
             background: linear-gradient(165deg, #0a2a3a 0%, #001a2a 100%);
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .section-badge {
@@ -618,126 +388,91 @@
             color: var(--primary-light);
         }
 
-        .section-header h2 { font-size: 2.2rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
         .section-header h2 .highlight { color: var(--primary-light); }
-        .section-header p { color: rgba(255, 255, 255, 0.7); max-width: 600px; margin: 0 auto; }
+        .section-header p {
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        /* Tarjetas como BOTONES */
+        .intl-cards {
+            display: flex;
             gap: 2rem;
+            justify-content: center;
         }
 
-        .team-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 1.5rem;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .team-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary-light);
-        }
-
-        .team-image {
-            width: 100%;
-            height: 280px;
-            overflow: hidden;
-        }
-
-        .team-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .team-card:hover .team-image img { transform: scale(1.05); }
-
-        .team-info { padding: 1.5rem; text-align: center; }
-        .team-info h3 { font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: 0.25rem; }
-        .team-role { font-size: 0.85rem; color: var(--primary-light); margin-bottom: 0.75rem; }
-        .team-desc { font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin-bottom: 1rem; }
-
-        .team-contact {
-            display: inline-flex;
+        .intl-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 0.5rem;
-            background: rgba(37, 211, 102, 0.2);
-            border: 1px solid rgba(37, 211, 102, 0.4);
-            border-radius: 2rem;
-            padding: 0.5rem 1rem;
-            color: #25D366;
-            font-size: 0.85rem;
-            text-decoration: none;
+            gap: 0.6rem;
+            flex: 1;
+            max-width: 220px;
             transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
         }
 
-        .team-contact:hover {
-            background: #25D366;
-            color: white;
+        .intl-card:hover {
+            border-color: #25D366;
+            transform: translateY(-5px);
+            background: rgba(37, 211, 102, 0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .intl-flag-wrap img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .intl-card-body h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin: 0;
+            letter-spacing: -0.02em;
         }
 
         @media (max-width: 768px) {
-            .team-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-            .section-header h2 { font-size: 1.8rem; }
+            .intl-cards {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.2rem;
+            }
+            .intl-card {
+                width: 100%;
+                max-width: 200px;
+                padding: 0.8rem 1.2rem;
+            }
+            .intl-flag-wrap img {
+                width: 48px;
+                height: 48px;
+            }
+            .intl-card-body h3 {
+                font-size: 1rem;
+            }
         }
 
         /* ============================================ */
-        /* POR QUÉ ELEGIRNOS */
-        /* ============================================ */
-        .why-us {
-            padding: 5rem 0;
-            background: var(--dark-bg);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .why-card {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 1rem;
-            padding: 1.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .why-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.15);
-        }
-
-        .why-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(0, 168, 255, 0.1);
-            border-radius: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-        }
-
-        .why-icon i { font-size: 1.8rem; color: var(--primary-light); }
-        .why-card h3 { font-size: 1.2rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
-        .why-card p { font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); line-height: 1.5; }
-
-        @media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
-
-        /* ============================================ */
-        /* CÓMO TRABAJAMOS (VIDEO + CTA) */
+        /* SECCIÓN 4: CÓMO TRABAJAMOS (VIDEO) */
         /* ============================================ */
         .how-we-work {
             padding: 5rem 0;
-            background: linear-gradient(165deg, #0a2a3a 0%, #001a2a 100%);
+            background: linear-gradient(165deg, #d4eaf5 0%, #e8f4fc 100%);
         }
 
         .how-we-work-wrapper {
@@ -749,7 +484,7 @@
         .how-we-work-title {
             font-size: 2.2rem;
             font-weight: 700;
-            color: var(--white);
+            color: var(--dark);
             margin-bottom: 2rem;
         }
 
@@ -772,205 +507,141 @@
             border: none;
         }
 
-        .how-we-work-btn {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            border: none;
-            border-radius: 3rem;
-            padding: 1rem 2rem;
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-md);
+        @media (max-width: 768px) {
+            .how-we-work-title { font-size: 1.8rem; }
         }
 
-        .how-we-work-btn:hover {
-            transform: scale(1.05);
-            box-shadow: var(--shadow-lg);
+        /* ============================================ */
+        /* SECCIÓN 5: CTA FINAL - BLOQUE DE CONTACTO */
+        /* ============================================ */
+        .cta-section {
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: repeating-linear-gradient(45deg, 
+                rgba(255, 255, 255, 0.03) 0px, 
+                rgba(255, 255, 255, 0.03) 20px,
+                transparent 20px, 
+                transparent 40px);
+            pointer-events: none;
+        }
+
+        .cta-wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-wrapper h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-wrapper h2 .highlight {
+            position: relative;
+            display: inline-block;
+            color: var(--white);
+        }
+
+        .cta-wrapper h2 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--white), transparent);
+            border-radius: 3px;
+        }
+
+        .cta-wrapper p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        /* Botón WhatsApp redondo */
+        .cta-button {
+            width: 70px;
+            height: 70px;
+            background: #25D366;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: pulseWhatsapp 2s infinite;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .cta-button i {
+            font-size: 2.2rem;
+            color: white;
+        }
+
+        @keyframes pulseWhatsapp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         @media (max-width: 768px) {
-            .how-we-work-title { font-size: 1.8rem; }
-            .how-we-work-btn { padding: 0.8rem 1.5rem; font-size: 1rem; }
+            .cta-wrapper h2 { font-size: 1.8rem; }
+            .cta-button { width: 60px; height: 60px; }
+            .cta-button i { font-size: 1.8rem; }
+            .cta-section { padding: 3rem 0; }
         }
 
-
-
-    /* ============================================ */
-/* CTA SECTION - BOTÓN CENTRADO */
-/* ============================================ */
-
-/* ============================================ */
-/* CTA SECTION - DISEÑO FIJO Y CENTRADO */
-/* ============================================ */
-
-.cta-section {
-    padding: 5rem 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    z-index: 0;
-}
-
-.cta-section::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: repeating-linear-gradient(45deg, 
-        rgba(255, 255, 255, 0.03) 0px, 
-        rgba(255, 255, 255, 0.03) 20px,
-        transparent 20px, 
-        transparent 40px);
-    z-index: 0;
-    pointer-events: none;
-}
-
-.cta-wrapper {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-
-    /* --- CORRECCIÓN DE CENTRADO --- */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra horizontalmente todos los hijos */
-    text-align: center;
-}
-
-.cta-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 0.4rem 1rem;
-    border-radius: 2rem;
-    margin-bottom: 1.5rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.cta-wrapper h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--white);
-    margin-bottom: 1rem;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-}
-
-.cta-wrapper h2 .highlight {
-    position: relative;
-    display: inline-block;
-    color: var(--white);
-}
-
-.cta-wrapper h2 .highlight::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, var(--white), transparent);
-    border-radius: 3px;
-}
-
-.cta-wrapper p {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 2rem;
-    max-width: 500px;
-}
-
-/* BOTÓN WHATSAPP - CENTRADO ABSOLUTO */
-.cta-button {
-    width: 70px;
-    height: 70px;
-    background: #25D366;
-    border: none;
-    border-radius: 50%;
-    
-    /* Centrado interno del icono */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    cursor: pointer;
-    padding: 0;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    animation: pulse 2s infinite;
-}
-
-.cta-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-}
-
-.cta-button i {
-    font-size: 2.2rem;
-    color: white;
-    display: inline-flex;
-    line-height: 1;
-}
-
-/* DECORACIÓN FLOTANTE */
-.cta-icon-decoration {
-    margin-bottom: 1rem;
-}
-
-.cta-icon-decoration i {
-    font-size: 3rem;
-    color: rgba(255, 255, 255, 0.3);
-    animation: float 3s ease-in-out infinite;
-    display: block;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .cta-wrapper h2 { font-size: 1.8rem; }
-    .cta-button { width: 60px; height: 60px; }
-    .cta-button i { font-size: 1.8rem; }
-}
         /* ============================================ */
-        /* FOOTER - IGUAL AL DE INICIO */
+        /* FOOTER */
         /* ============================================ */
         .footer {
             background: #000000;
@@ -1081,7 +752,7 @@
             margin: 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
             transition: all 0.3s ease;
-            animation: pulse 2s infinite;
+            animation: pulseWhatsapp 2s infinite;
             color: white;
             font-size: 2rem;
         }
@@ -1089,12 +760,6 @@
         .whatsapp-btn:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-            70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         /* ============================================ */
@@ -1148,315 +813,64 @@
     <main>
 
         <!-- SECCIÓN 1: HERO - QUIÉNES SOMOS -->
-<section class="page-hero">
-    <!-- Imagen para desktop -->
-    <picture class="page-hero-picture">
-        <source media="(max-width: 768px)" srcset="who-mobile.png">
-        <source media="(min-width: 769px)" srcset="who.png">
-        <img src="who.png" alt="Quiénes somos - Tesis Challenge" class="page-hero-img">
-    </picture>
-    <div class="page-hero-overlay"></div>
-    <div class="container">
-        <div class="page-hero-content">
-            <div class="page-hero-badge animate-on-scroll">
-                <span class="badge-dot"></span>
-                <span>Nosotros</span>
-            </div>
-            <h1 class="page-hero-title animate-on-scroll">¿Quiénes somos?</h1>
-            <p class="page-hero-subtitle animate-on-scroll">Somos Tesis Challenge, creamos trabajos académicos personalizados de alta calidad, asegurando excelencia y confiabilidad en cada proyecto.</p>
-        </div>
-    </div>
-</section>
-<!-- ===== SECCIÓN: TRABAJAMOS INTERNACIONALMENTE ===== -->
-<section class="intl-section">
-    <div class="container">
-
-        <div class="section-header animate-on-scroll">
-            <div class="section-badge">
-                <i class="bi bi-globe-americas"></i>
-                Presencia global
-            </div>
-            <h2>Trabajamos de forma <span class="highlight">internacional</span></h2>
-            <p>Asesoramos a estudiantes en Argentina y México con apoyo académico de excelencia, sin importar la distancia.</p>
-        </div>
-
-        <div class="intl-map-box animate-on-scroll">
-            <svg id="intl-map" style="display:block;width:100%;"></svg>
-            <div class="intl-legend">
-                <span class="intl-legend-dot"></span>
-                <span>Países donde operamos</span>
-            </div>
-        </div>
-
-        <div class="intl-cards animate-on-scroll">
-            <div class="intl-card">
-                <div class="intl-flag-wrap">
-    <img src="https://flagcdn.com/w80/mx.png" alt="México" style="width:38px;border-radius:4px;">
-</div>
-                <div class="intl-card-body">
-                    <h3>México</h3>
-                    <p>----</p>
+        <section class="page-hero">
+            <picture class="page-hero-picture">
+                <source media="(max-width: 768px)" srcset="who-mobile.png">
+                <source media="(min-width: 769px)" srcset="who.png">
+                <img src="who.png" alt="Quiénes somos - Tesis Challenge" class="page-hero-img">
+            </picture>
+            <div class="page-hero-overlay"></div>
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 class="page-hero-title animate-on-scroll">¿Quiénes somos?</h1>
+                    <p class="page-hero-subtitle animate-on-scroll">Brindamos asesoramiento académico a nivel global, acompañando a estudiantes de todo el mundo con estándares de excelencia y sin limitaciones geográficas</p>
                 </div>
             </div>
-            <div class="intl-card">
-                <div class="intl-flag-wrap">
-    <img src="https://flagcdn.com/w80/ar.png" alt="Argentina" style="width:38px;border-radius:4px;">
-</div>
-                <div class="intl-card-body">
-                    <h3>Argentina</h3>
-                    <p>----</p>
+        </section>
+
+        <!-- SECCIÓN 2: IMAGEN GRANDE -->
+        <section class="image-showcase-section">
+            <div class="container">
+                <div class="countries-image animate-on-scroll">
+                    <img src="Quienes somos.png" alt="Conexión internacional">
                 </div>
             </div>
-        </div>
+        </section>
 
-    </div>
-</section>
+        <!-- SECCIÓN 3: PRESENCIA GLOBAL + BOTONES DE MÉXICO Y ARGENTINA -->
+        <section class="presencia-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <div class="section-badge">
+                        <i class="bi bi-globe-americas"></i>
+                        Presencia global
+                    </div>
+                    <h2>Trabajamos de forma <span class="highlight">internacional</span></h2>
+                    <p>Asesoramos a estudiantes en Argentina y México con apoyo académico de excelencia, sin importar la distancia.</p>
+                </div>
 
-<style>
-/* ============================================ */
-/* SECCIÓN INTERNACIONAL                         */
-/* ============================================ */
-.intl-section {
-    padding: 5rem 0;
-    background: var(--dark-bg);
-}
-.intl-map-box {
-    max-width: 850px;   /* ← el ancho máximo que quieras */
-    margin-left: auto;
-    margin-right: auto;
-}
+                <div class="intl-cards animate-on-scroll">
+                    <a href="https://wa.link/b9xgk5" target="_blank" class="intl-card" id="btn-mexico">
+                        <div class="intl-flag-wrap">
+                            <img src="https://flagcdn.com/w80/mx.png" alt="México">
+                        </div>
+                        <div class="intl-card-body">
+                            <h3>México</h3>
+                        </div>
+                    </a>
+                    <a href="https://wa.link/b9xgk5" target="_blank" class="intl-card" id="btn-argentina">
+                        <div class="intl-flag-wrap">
+                            <img src="https://flagcdn.com/w80/ar.png" alt="Argentina">
+                        </div>
+                        <div class="intl-card-body">
+                            <h3>Argentina</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-.intl-map-box {
-    border-radius: 1.5rem;
-    overflow: hidden;
-    margin-bottom: 2rem;
-    border: 1px solid rgba(0, 168, 255, 0.15);
-    position: relative;
-    background: #041520;
-}
-
-.intl-legend {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: rgba(255,255,255,0.6);
-    font-size: 0.78rem;
-    background: rgba(0,0,0,0.45);
-    backdrop-filter: blur(10px);
-    padding: 0.3rem 0.75rem;
-    border-radius: 2rem;
-}
-
-.intl-legend-dot {
-    width: 8px;
-    height: 8px;
-    background: #00A8FF;
-    border-radius: 50%;
-    display: inline-block;
-    animation: pulse 2s infinite;
-}
-
-.intl-cards {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-}
-
-.intl-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 1.2rem;
-    padding: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    flex: 1;
-    max-width: 420px;
-    transition: all 0.3s ease;
-    cursor: default;
-}
-
-.intl-card:hover {
-    border-color: rgba(0, 168, 255, 0.4);
-    transform: translateY(-5px);
-    background: rgba(255,255,255,0.08);
-}
-
-.intl-flag-wrap {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: rgba(233, 235, 236, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    font-size: 2rem;
-}
-
-.intl-card-body h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #FFFFFF;
-    margin-bottom: 0.35rem;
-}
-
-.intl-card-body p {
-    color: rgba(255,255,255,0.6);
-    font-size: 0.85rem;
-    margin: 0;
-    line-height: 1.5;
-}
-
-@media (max-width: 768px) {
-    .intl-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-    .intl-card {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-</style>
-
-<!-- Scripts del mapa mundial (colocar antes de </body> si prefieres) -->
-<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
-<script>
-window.addEventListener('load', async function () {
-    try { await drawIntlMap(); } catch (e) { console.warn('Mapa no disponible:', e); }
-});
-
-async function drawIntlMap() {
-    const el = document.getElementById('intl-map');
-    if (!el || typeof d3 === 'undefined' || typeof topojson === 'undefined') return;
-
-    const w = el.parentElement.clientWidth || 900;
-    const h = Math.round(w * 0.39);
-
-    const svg = d3.select(el)
-        .attr('viewBox', `0 0 ${w} ${h}`)
-        .attr('width', '100%')
-        .attr('height', h)
-        .style('background', '#041520');
-
-    const projection = d3.geoNaturalEarth1()
-        .rotate([70, 0])          // Centra la vista en América
-        .scale(w / 6.2)
-        .translate([w / 2, h / 2]);
-
-    const pathGen = d3.geoPath().projection(projection);
-
-    // Esfera exterior
-    svg.append('path')
-        .datum({ type: 'Sphere' })
-        .attr('d', pathGen)
-        .attr('fill', 'none')
-        .attr('stroke', 'rgba(0,168,255,0.18)')
-        .attr('stroke-width', 0.8);
-
-    // Líneas de latitud/longitud
-    svg.append('path')
-        .datum(d3.geoGraticule()())
-        .attr('d', pathGen)
-        .attr('fill', 'none')
-        .attr('stroke', 'rgba(0,168,255,0.06)')
-        .attr('stroke-width', 0.5);
-
-    // Datos del mapa mundial
-    const world = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
-    const countries = topojson.feature(world, world.objects.countries);
-    const highlighted = new Set([484, 32]); // México=484, Argentina=32
-
-    // Dibujar todos los países
-    svg.selectAll('.intl-c')
-        .data(countries.features)
-        .enter().append('path')
-        .attr('class', 'intl-c')
-        .attr('d', pathGen)
-        .attr('fill', d => highlighted.has(+d.id) ? 'rgba(0,81,137,0.75)' : '#0a3352')
-        .attr('stroke', '#041520')
-        .attr('stroke-width', 0.4);
-
-    // Destacar México y Argentina con borde y relleno azul
-    svg.selectAll('.intl-hl')
-        .data(countries.features.filter(d => highlighted.has(+d.id)))
-        .enter().append('path')
-        .attr('class', 'intl-hl')
-        .attr('d', pathGen)
-        .attr('fill', 'rgba(0,168,255,0.22)')
-        .attr('stroke', '#40C5FF')
-        .attr('stroke-width', 1.3);
-
-    // Marcadores animados
-    const locations = [
-        { name: 'México',    coords: [-99.13,  19.43] },
-        { name: 'Argentina', coords: [-58.38, -34.60] }
-    ];
-
-    locations.forEach(({ name, coords }) => {
-        const proj = projection(coords);
-        if (!proj) return;
-        const [x, y] = proj;
-        const g = svg.append('g');
-
-        // Dos anillos de pulso con retardo escalonado
-        [0, 700].forEach(delay => {
-            const ring = g.append('circle')
-                .attr('cx', x).attr('cy', y).attr('r', 5)
-                .attr('fill', 'none')
-                .attr('stroke', '#00A8FF')
-                .attr('stroke-width', 1.5)
-                .attr('opacity', 0);
-
-            (function anim() {
-                ring.attr('r', 5).attr('opacity', 0.9)
-                    .transition().delay(delay).duration(1800).ease(d3.easeLinear)
-                    .attr('r', 26).attr('opacity', 0)
-                    .on('end', anim);
-            })();
-        });
-
-        // Punto central
-        g.append('circle')
-            .attr('cx', x).attr('cy', y).attr('r', 5)
-            .attr('fill', '#00A8FF')
-            .attr('stroke', 'white')
-            .attr('stroke-width', 1.5);
-
-        // Etiqueta con fondo oscuro para legibilidad
-        const fs = Math.max(9, Math.min(13, w / 65));
-        g.append('text')
-            .attr('x', x).attr('y', y - 13)
-            .attr('text-anchor', 'middle')
-            .attr('fill', 'none')
-            .attr('stroke', '#041520')
-            .attr('stroke-width', 3)
-            .attr('paint-order', 'stroke')
-            .attr('font-size', fs)
-            .attr('font-weight', '700')
-            .attr('font-family', 'Inter, sans-serif')
-            .text(name);
-
-        g.append('text')
-            .attr('x', x).attr('y', y - 13)
-            .attr('text-anchor', 'middle')
-            .attr('fill', '#FFFFFF')
-            .attr('font-size', fs)
-            .attr('font-weight', '700')
-            .attr('font-family', 'Inter, sans-serif')
-            .text(name);
-    });
-}
-</script>
-<!-- ===== FIN: SECCIÓN INTERNACIONAL ===== -->
-
-
-        <!-- SECCIÓN 7: CÓMO TRABAJAMOS PARA TU ÉXITO (VIDEO) -->
+        <!-- SECCIÓN 4: CÓMO TRABAJAMOS (VIDEO) -->
         <section class="how-we-work">
             <div class="container">
                 <div class="how-we-work-wrapper animate-on-scroll">
@@ -1470,37 +884,26 @@ async function drawIntlMap() {
                             allowfullscreen>
                         </iframe>
                     </div>
-                    
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 8: TESTIMONIOS -->
-        
-
-    <!-- SECCIÓN 9: CTA FINAL -->
-<section class="cta-section">
-    <div class="container">
-        <div class="cta-wrapper animate-on-scroll">
-            <div class="cta-icon-decoration">
-                <i class="bi bi-chat-dots-fill"></i>
+        <!-- SECCIÓN 5: CTA FINAL - BLOQUE DE CONTACTO -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-wrapper animate-on-scroll">
+                    <div class="cta-badge">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                        <span>¡Último paso hacia tu título!</span>
+                    </div>
+                    <h2>¿Listo para dar el <span class="highlight">siguiente paso</span>?</h2>
+                    <p>Contacta con un asesor y comienza tu proyecto académico hoy mismo.</p>
+                    <button class="cta-button whatsapp-btn">
+                        <i class="bi bi-whatsapp"></i>
+                    </button>
+                </div>
             </div>
-            
-            <div class="cta-badge">
-                <i class="bi bi-lightning-charge-fill"></i>
-                <span>¡Último paso hacia tu título!</span>
-            </div>
-            
-            <h2>¿Listo para dar el <span class="highlight">siguiente paso</span>?</h2>
-            
-            <p>Contacta con un asesor y comienza tu proyecto académico hoy mismo.</p>
-            
-            <button class="cta-button whatsapp-btn">
-                <i class="bi bi-whatsapp"></i>
-            </button>
-        </div>
-    </div>
-</section>
+        </section>
 
     </main>
 
@@ -1600,14 +1003,17 @@ async function drawIntlMap() {
             window.addEventListener('scroll', checkReveal);
             checkReveal();
             
-            // WhatsApp Buttons
-            const whatsappBtns = document.querySelectorAll('.whatsapp-btn, .cta-button, .how-we-work-btn, .team-contact');
+            // Función compartida para abrir WhatsApp
+            function openWhatsApp() {
+                window.open('https://wa.link/b9xgk5', '_blank');
+            }
+            
+            // Todos los botones de WhatsApp
+            const whatsappBtns = document.querySelectorAll('.whatsapp-btn, .cta-button, .intl-card');
             whatsappBtns.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const links = ['https://wa.link/b9xgk5', 'https://wa.link/b9xgk5'];
-                    const randomLink = links[Math.floor(Math.random() * links.length)];
-                    window.open(randomLink, '_blank');
+                    openWhatsApp();
                 });
             });
         });
