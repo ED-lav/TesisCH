@@ -244,15 +244,14 @@
             .nav-menu { display: none; }
             .menu-toggle { display: flex; }
         }
-
-               /* ============================================ */
+        /* ============================================ */
         /* SECCIÓN 1: HERO - QUIÉNES SOMOS (ALTURA REDUCIDA) */
         /* ============================================ */
         .page-hero {
             position: relative;
             width: 100%;
-            min-height: 320px;   /* ← ANTES: 500px / AHORA: 320px */
-            height: 65vh;        /* ← ANTES: 85vh / AHORA: 45vh */
+            min-height: 320px;
+            height: 65vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -273,8 +272,8 @@
         .page-hero-img {
             width: 100%;
             height: 100%;
-            object-fit: cover;      /* ← SE MANTIENE: ocupa todo el ancho */
-            object-position: center 0%;
+            object-fit: cover;
+            object-position: center 0%;  /* Posición para escritorio */
             display: block;
         }
 
@@ -328,26 +327,41 @@
             .page-hero { height: 40vh; min-height: 280px; }
             .page-hero-title { font-size: 2.8rem; }
             .page-hero-subtitle { font-size: 1.1rem; }
+            .page-hero-img { object-position: center 5%; }
         }
 
         /* Móviles */
         @media (max-width: 768px) {
             .page-hero { 
-                height: 35vh; 
-                min-height: 250px;
+                height: 38vh; 
+                min-height: 260px;
             }
-            .page-hero-title { font-size: 2.2rem; }
-            .page-hero-subtitle { font-size: 1rem; }
+            .page-hero-title { font-size: 1.8rem; }
+            .page-hero-subtitle { font-size: 0.9rem; padding: 0 1rem; }
+            .page-hero-img { 
+                object-position: center 0%;  /* Ajusta este valor para who-mobile.png */
+            }
         }
 
         /* Móviles pequeños */
         @media (max-width: 576px) {
             .page-hero { 
-                height: 30vh; 
-                min-height: 220px;
+                height: 50vh; 
+                min-height: 230px;
             }
-            .page-hero-title { font-size: 1.8rem; }
+            .page-hero-title { font-size: 1.5rem; }
+            .page-hero-subtitle { font-size: 0.8rem; }
+            .page-hero-img { 
+                object-position: center 0%;  /* Más desplazamiento para pantallas muy pequeñas */
+            }
+        }
+
+        /* Landscape en móviles */
+        @media (max-width: 900px) and (orientation: landscape) {
+            .page-hero { height: 70vh; min-height: 300px; }
+            .page-hero-title { font-size: 1.6rem; }
             .page-hero-subtitle { font-size: 0.85rem; }
+            .page-hero-img { object-position: center 15%; }
         }
 
         
