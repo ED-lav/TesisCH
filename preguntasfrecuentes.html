@@ -572,148 +572,189 @@
             .faq-question h3 { font-size: 1rem; }
         }
 
-        /* ============================================ */
-        /* SECCIÓN 4: CTA - REDUCIDA EN ALTURA (más compacta) */
-        /* ============================================ */
-        .cta-contact-section {
-            padding: 2.5rem 0;  /* Reducido de 5rem a 2.5rem */
-            background: linear-gradient(135deg, #3a8cc7 0%, #e0edf5 100%);
-        }
+        /* SECCIÓN 4: CTA - DISEÑO CENTRADO Y PROFESIONAL */
+.cta-contact-section {
+    padding: 2.5rem 0;
+    background: linear-gradient(135deg, #3a8cc7 0%, #e0edf5 100%);
+}
 
-        .cta-contact-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 3rem;  /* Reducido de 4rem a 3rem */
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(4px);
-            border-radius: 1.5rem;  /* Ligeramente más pequeño */
-            padding: 1.5rem;  /* Reducido de 2rem a 1.5rem */
-            box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-        }
+.cta-contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    border-radius: 1.5rem;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
 
-        .cta-contact-image {
-            flex: 1;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: transform 0.3s ease;
-            background: #fff;
-            max-width: 280px;  /* Limitar ancho de la imagen para hacerla más compacta */
-        }
-        .cta-contact-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 1rem;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-        .cta-contact-image:hover img {
-            transform: scale(1.02);
-        }
+.cta-contact-image {
+    flex: 0 0 280px;
+    width: 280px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+    background: #fff;
+}
 
-        .cta-contact-content {
-            flex: 1;
-            text-align: left;
-        }
+.cta-contact-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
 
-        .cta-contact-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(0, 168, 255, 0.15);
-            padding: 0.3rem 0.8rem;  /* Más compacto */
-            border-radius: 2rem;
-            margin-bottom: 0.75rem;
-            font-size: 0.75rem;
-            color: var(--primary-dark);
-            font-weight: 600;
-        }
+.cta-contact-image:hover img {
+    transform: scale(1.02);
+}
 
-        .cta-contact-content h2 {
-            font-size: 1.6rem;  /* Reducido de 2rem */
-            font-weight: 700;
-            color: var(--text-dark-soft);
-            margin-bottom: 0.75rem;
-        }
+.cta-contact-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 420px;
+}
 
-        .cta-contact-content h2 .highlight {
-            color: var(--primary);
-            font-weight: 800;
-        }
+.cta-text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
 
-        .cta-contact-content p {
-            color: var(--gray-dark);
-            line-height: 1.5;
-            margin-bottom: 1.2rem;
-            font-size: 0.9rem;
-        }
+.cta-contact-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0, 168, 255, 0.15);
+    padding: 0.35rem 1rem;
+    border-radius: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+    white-space: nowrap;
+}
 
-        .cta-button-wrapper {
-            display: flex;
-            justify-content: center;
-        }
+.faq-hero-badge-dot {
+    width: 8px;
+    height: 8px;
+    background: #00a8ff;
+    border-radius: 50%;
+    animation: pulseDot 2s infinite;
+}
 
-        .cta-contact-button-icon {
-            width: 50px;  /* Reducido de 60px */
-            height: 50px;
-            background: #25D366;
-            border: none;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            animation: pulseWhatsapp 2s infinite;
-        }
+@keyframes pulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.85); }
+}
 
-        .cta-contact-button-icon:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-        }
+.cta-contact-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark-soft);
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+    width: 100%;
+}
 
-        .cta-contact-button-icon i {
-            font-size: 1.6rem;  /* Reducido de 2rem */
-            color: white;
-        }
+.cta-contact-content h2 .highlight {
+    color: var(--primary);
+    font-weight: 800;
+}
 
-        @media (max-width: 768px) {
-            .cta-contact-section {
-                padding: 2rem 0;
-            }
-            .cta-contact-wrapper {
-                flex-direction: column;
-                padding: 1.2rem;
-                gap: 1.5rem;
-                text-align: center;
-            }
-            .cta-contact-image {
-                max-width: 220px;
-            }
-            .cta-contact-content {
-                text-align: center;
-            }
-            .cta-contact-content h2 {
-                font-size: 1.4rem;
-            }
-            .cta-contact-content p {
-                font-size: 0.85rem;
-                margin-bottom: 1rem;
-            }
-            .cta-button-wrapper {
-                justify-content: center;
-            }
-            .cta-contact-button-icon {
-                width: 48px;
-                height: 48px;
-            }
-            .cta-contact-button-icon i {
-                font-size: 1.5rem;
-            }
-        }
+.cta-contact-content p {
+    color: var(--gray-dark);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.cta-button-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cta-contact-button-icon {
+    width: 54px;
+    height: 54px;
+    background: linear-gradient(135deg, #25D366 0%, #20b358 100%);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+    animation: pulseWhatsapp 2s infinite;
+}
+
+.cta-contact-button-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+    background: #20b358;
+}
+
+.cta-contact-button-icon i {
+    font-size: 1.7rem;
+    color: white;
+}
+
+@keyframes pulseWhatsapp {
+    0%, 100% { box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35); }
+    50% { box-shadow: 0 4px 25px rgba(37, 211, 102, 0.6); }
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media (max-width: 768px) {
+    .cta-contact-section {
+        padding: 2rem 0;
+    }
+    
+    .cta-contact-wrapper {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .cta-contact-image {
+        max-width: 220px;
+        width: 100%;
+    }
+    
+    .cta-contact-content {
+        max-width: 100%;
+    }
+    
+    .cta-contact-content h2 {
+        font-size: 1.35rem;
+    }
+    
+    .cta-contact-content p {
+        font-size: 0.85rem;
+    }
+    
+    .cta-contact-button-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .cta-contact-button-icon i {
+        font-size: 1.5rem;
+    }
+}
 
         /* ============================================ */
         /* FOOTER */
@@ -909,13 +950,11 @@
                         <img src="friends.png" alt="Asesoría profesional académica">
                     </div>
                     <div class="asesoria-content">
-                        <div class="asesoria-badge">
-                            <span class="faq-hero-badge-dot"></span>
-                            <span>Acompañamiento experto</span>
+                        <div class="">
                         </div>
                         <h2>Asesoría profesional académica</h2>
                         <p>Nuestras preguntas frecuentes están desarrolladas para resolver todas tus dudas y así brindarte el mejor servicio. Recordá que si tenés más dudas, contactá con un asesor para resolverlas.</p>
-                        <p>Contamos con un equipo de profesionales especializados en todas las áreas del conocimiento, listos para ayudarte a alcanzar tus metas académicas.</p>
+                        
                     </div>
                 </div>
             </div>
@@ -993,29 +1032,31 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 4: CTA CON IMAGEN DE LA CHICA - VERSIÓN MÁS BAJA/COMPACTA -->
-        <section class="cta-contact-section">
-            <div class="container">
-                <div class="cta-contact-wrapper animate-on-scroll">
-                    <div class="cta-contact-image">
-                        <img src="preguntas.png" alt="Consultora especialista">
+       <!-- SECCIÓN 4: CTA CON IMAGEN DE LA CHICA -->
+<section class="cta-contact-section">
+    <div class="container">
+        <div class="cta-contact-wrapper animate-on-scroll">
+            <div class="cta-contact-image">
+                <img src="preguntas.png" alt="Consultora especialista">
+            </div>
+            <div class="cta-contact-content">
+                <div class="cta-text-group">
+                    <div class="cta-contact-badge">
+                        <span class="faq-hero-badge-dot"></span>
+                        <span>¿Necesitas ayuda personalizada?</span>
                     </div>
-                    <div class="cta-contact-content">
-                        <div class="cta-contact-badge">
-                            <span class="faq-hero-badge-dot"></span>
-                            <span>¿Necesitas ayuda personalizada?</span>
-                        </div>
-                        <h2>Si tu consulta no está en la lista, <span class="highlight">hablanos</span></h2>
-                        <p>Contactá con un especialista y resolvemos todas tus dudas <strong>hoy</strong> mismo.</p>
-                        <div class="cta-button-wrapper">
-                            <button class="cta-contact-button-icon whatsapp-btn">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
+                    <h2>Si tu consulta no está en la lista, <span class="highlight">hablanos</span></h2>
+                    <p>Contactá con un especialista y resolvemos todas tus dudas <strong>hoy</strong> mismo.</p>
+                </div>
+                <div class="cta-button-wrapper">
+                    <button class="cta-contact-button-icon whatsapp-btn">
+                        <i class="bi bi-whatsapp"></i>
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
     </main>
 
     <!-- FOOTER -->
