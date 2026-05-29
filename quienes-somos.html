@@ -365,31 +365,185 @@
         }
 
         
-        /* ============================================ */
-        /* SECCIÓN 2: IMAGEN GRANDE */
-        /* ============================================ */
-        .image-showcase-section {
-            padding: 5rem 0;
-            background: linear-gradient(165deg, #0a2a3a 0%, #001a2a 100%);
-        }
+       /* ============================================ */
+/* SECCIÓN 2: NUEVO DISEÑO CON FONDO, IMAGEN Y TARJETAS */
+/* ============================================ */
+.new-feature-section {
+    padding: 4rem 0;
+    background: url('sec2.png') center center / cover no-repeat;
+    position: relative;
+    z-index: 1;
+}
 
-        .countries-image {
-            text-align: center;
-        }
+/* Overlay oscuro (opcional, mejora legibilidad del texto) */
+.new-feature-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
 
-        .countries-image img {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            border-radius: 1.5rem;
-            box-shadow: var(--shadow-xl);
-            transition: transform 0.3s ease;
-        }
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
 
-        .countries-image img:hover {
-            transform: scale(1.01);
-        }
+.feature-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    display: block;
+}
 
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.feature-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.feature-header p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.feature-btn {
+    background: var(--primary);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.8rem 2rem;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;   /* ← Elimina subrayado en enlaces */
+    display: inline-block;    /* ← Para que no ocupe todo el ancho en desktop */
+}
+
+.feature-btn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.02);
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--primary-light);
+}
+
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+    min-height: 55px;
+}
+
+.card-icon svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.feature-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.4;
+}
+
+/* Responsive móvil */
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .feature-image {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .feature-header h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .feature-header p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .feature-btn {
+        display: block;      /* ← En móvil ocupa bloque para centrar */
+        margin: 0 auto;      /* ← Centrado horizontal */
+        width: fit-content;  /* ← Mantiene el ancho según contenido */
+    }
+
+    .feature-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature-card {
+        text-align: center;
+    }
+
+    .card-icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 1200px) {
+    .feature-image img {
+        max-height: 600px;
+        object-fit: cover;
+    }
+}
         /* ============================================ */
         /* SECCIÓN 3: PRESENCIA GLOBAL + BOTONES */
         /* ============================================ */
@@ -856,14 +1010,86 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 2: IMAGEN GRANDE -->
-        <section class="image-showcase-section">
-            <div class="container">
-                <div class="countries-image animate-on-scroll">
-                    <img src="Quienes somos.png" alt="Conexión internacional">
+                             <!-- SECCIÓN 2: NUEVO DISEÑO CON FONDO, IMAGEN Y TARJETAS -->
+<section class="new-feature-section">
+    <div class="container">
+        <div class="feature-grid">
+            <!-- Imagen izquierda -->
+            <div class="feature-image">
+                <img src="girl1.png" alt="Acompañamiento académico">
+            </div>
+
+            <!-- Contenido derecho -->
+            <div class="feature-content">
+                <div class="feature-header">
+                    <h2>Te acompañamos en tu proceso académico</h2>
+                    <p>Creemos que tu final de carrera merece ser único, Tesis Challenge está para acompañarte.</p>
+                    <!-- Botón WhatsApp como enlace -->
+                    <a href="https://wa.link/b9xgk5" target="_blank" class="feature-btn cotizar-btn" style="text-decoration: none;">Contáctanos</a>
+                </div>
+
+                <div class="feature-cards">
+                    <!-- Tarjeta 1: Transparencia (lupa) -->
+                    <div class="feature-card">
+                        <div class="card-icon">
+                            <svg width="53" height="55" viewBox="0 0 53 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clipLupa)">
+                                    <path d="M19.875 34.375L2.5 52M30.9167 38.9583C39.4541 38.9583 46.375 31.7762 46.375 22.9167C46.375 14.0571 39.4541 6.875 30.9167 6.875C22.3793 6.875 15.4583 14.0571 15.4583 22.9167C15.4583 31.7762 22.3793 38.9583 30.9167 38.9583Z" stroke="url(#gradLupa)" stroke-width="5" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <linearGradient id="gradLupa" x1="24.4375" y1="52" x2="24.4375" y2="6.875" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" stop-opacity="0.15"/>
+                                        <stop offset="1" stop-color="white"/>
+                                    </linearGradient>
+                                    <clipPath id="clipLupa"><rect width="53" height="55" fill="white" transform="matrix(-1 0 0 1 53 0)"/></clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3>Transparencia</h3>
+                        <p>Ofrecemos un proceso, con avances detallados en cada etapa de tu proyecto académico.</p>
+                    </div>
+
+                    <!-- Tarjeta 2: Compromiso (manos - ORIGINAL) -->
+                    <div class="feature-card">
+                        <div class="card-icon">
+                            <svg width="55" height="37" viewBox="0 0 55 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.0325 5.64031L15.8719 4.14371L10.6611 0.997767L1 18.2246L6.21081 21.3705L7.67969 18.7513M15.0325 5.64031L18.2127 7.58653L26.7824 8.91199M15.0325 5.64031L7.67969 18.7513M26.7824 8.91199L29.7455 7.1263L35.4038 9.39415L40.3451 6.40248M26.7824 8.91199L20.2221 12.8697C19.0924 13.5513 18.7085 15.0535 19.3642 16.2263C20.0213 17.4017 21.4733 17.8004 22.6048 17.1161L27.6164 14.085L28.7149 16.0314C30.3428 18.9159 33.9746 19.7844 36.6551 17.9303C36.7429 17.8695 36.8562 17.8651 36.9481 17.919L43.8354 21.951M40.3451 6.40248L39.0768 4.15833L44.3071 0.996094L54 18.2639L48.7569 21.421L47.3044 18.8277M40.3451 6.40248L47.3044 18.8277M43.8354 21.951L44.3525 22.2537C45.4142 22.8753 45.7957 24.2679 45.2079 25.376C44.6174 26.489 43.2709 26.8974 42.1957 26.2896L37.8086 23.8098L39.2931 24.6948C40.298 25.2939 40.653 26.6192 40.0902 27.6704C39.5209 28.7335 38.2283 29.1157 37.2045 28.5235L33.6602 26.4735L34.659 27.0791C35.6655 27.6894 36.0176 29.0224 35.4516 30.0799C34.8806 31.1468 33.5878 31.5373 32.5541 30.955L29.7116 29.354L30.6331 29.8968C31.6659 30.5051 32.0362 31.8614 31.4644 32.9414C30.8873 34.0316 29.5679 34.4304 28.5167 33.8324L26.2625 32.5502M43.8354 21.951L47.3044 18.8277M7.67969 18.7513L10.7976 19.8537L13.7414 23.1239M13.7414 23.1239L14.2602 22.4211C14.9133 21.5364 16.1421 21.3874 16.9742 22.0921C17.7688 22.765 17.9063 23.9704 17.2851 24.8172L16.1811 26.3225M13.7414 23.1239L12.1204 25.2964C11.483 26.1506 11.6201 27.3768 12.4292 28.0568C13.2687 28.7625 14.5044 28.6083 15.1587 27.7162L16.1811 26.3225M16.1811 26.3225L15.0757 27.9239C14.4949 28.7652 14.6436 29.9298 15.4154 30.5853C16.242 31.2872 17.4643 31.1403 18.1143 30.261L19.1618 28.8441M16.1811 26.3225L17.2615 24.9114C17.9218 24.049 19.1338 23.9119 19.9577 24.6064C20.7593 25.282 20.897 26.4968 20.2685 27.347L19.1618 28.8441M19.1618 28.8441L20.2666 27.4323C20.9365 26.5762 22.1468 26.4415 22.9764 27.1307C23.7868 27.804 23.9402 29.021 23.3241 29.8878L22.2864 31.3476M19.1618 28.8441L18.1374 30.331C17.5146 31.2349 17.7062 32.49 18.5676 33.1501C19.4389 33.8178 20.667 33.6257 21.31 32.7212L22.2864 31.3476M22.2864 31.3476L23.3633 29.9212C24.0066 29.0691 25.1877 28.9053 26.0242 29.5522C26.8835 30.2168 27.0526 31.4823 26.4 32.3644L26.2625 32.5502M22.2864 31.3476L21.2341 32.9422C20.6709 33.7956 20.8473 34.9567 21.6362 35.589C22.46 36.2491 23.6439 36.0895 24.2777 35.2329L26.2625 32.5502" stroke="url(#paint0_linear_84_614)" stroke-width="2" stroke-linejoin="round"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_84_614" x1="27.5" y1="0.996094" x2="28" y2="54.9961" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"/>
+                                        <stop offset="1" stop-color="white" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3>Compromiso</h3>
+                        <p>Revisamos cada detalle de tu proyecto, ajustándonos a tus plazos y necesidades para que alcances tus metas sin complicaciones.</p>
+                    </div>
+
+                    <!-- Tarjeta 3: Acompañamiento (tres personas) -->
+                    <div class="feature-card">
+                        <div class="card-icon">
+                            <svg width="53" height="55" viewBox="0 0 53 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="16" r="6" stroke="url(#gradGroup)" stroke-width="4"/>
+                                <circle cx="35" cy="16" r="6" stroke="url(#gradGroup)" stroke-width="4"/>
+                                <circle cx="26.5" cy="28" r="5" stroke="url(#gradGroup)" stroke-width="4"/>
+                                <path d="M12 38C12 32 19 29 26.5 29C34 29 41 32 41 38" stroke="url(#gradGroup)" stroke-width="4" stroke-linecap="round"/>
+                                <defs>
+                                    <linearGradient id="gradGroup" x1="0" y1="55" x2="53" y2="0" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" stop-opacity="0.15"/>
+                                        <stop offset="1" stop-color="white"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3>Acompañamiento</h3>
+                        <p>Te guiamos paso a paso en tu proyecto académico hasta alcanzar tus objetivos.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <!-- SECCIÓN 3: PRESENCIA GLOBAL + BOTONES DE MÉXICO Y ARGENTINA -->
         <section class="presencia-section">
