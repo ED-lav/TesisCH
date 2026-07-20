@@ -591,22 +591,25 @@
     border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
+/* 🔄 CONTENEDOR DE IMAGEN MÁS GRANDE */
 .cta-contact-image {
-    flex: 0 0 280px;
-    width: 280px;
+    flex: 0 0 380px;            /* antes 280px, ahora más ancho */
+    width: 380px;
+    max-width: 45%;             /* para que no se coma toda la sección */
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: transform 0.3s ease;
-    background: #fff;
+    background: transparent;    /* sin fondo blanco para que respire */
 }
 
+/* 🖼️ IMAGEN COMPLETA, SIN RECORTES, MÁS GRANDE */
 .cta-contact-image img {
     width: 100%;
-    height: auto;
+    height: auto;               /* altura automática según proporción */
     display: block;
     border-radius: 1rem;
-    object-fit: cover;
+    object-fit: contain;        /* ← clave: muestra la imagen entera */
     transition: transform 0.4s ease;
 }
 
@@ -614,6 +617,7 @@
     transform: scale(1.02);
 }
 
+/* Contenido derecho sin cambios */
 .cta-contact-content {
     flex: 1;
     display: flex;
@@ -730,8 +734,10 @@
     }
     
     .cta-contact-image {
-        max-width: 220px;
+        flex: 0 0 auto;         /* para que no tome 380px en móvil */
         width: 100%;
+        max-width: 280px;       /* antes 220px, ahora más grande en móvil también */
+        margin: 0 auto;
     }
     
     .cta-contact-content {
@@ -1045,7 +1051,7 @@
                         <span class="faq-hero-badge-dot"></span>
                         <span>¿Necesitas ayuda personalizada?</span>
                     </div>
-                    <h2>Si tu consulta no está en la lista, <span class="highlight">hablanos</span></h2>
+                    <h2>Si tu consulta no está en la lista, <span class="highlight">HABLANOS</span></h2>
                     <p>Contactá con un especialista y resolvemos todas tus dudas <strong>hoy</strong> mismo.</p>
                 </div>
                 <div class="cta-button-wrapper">
