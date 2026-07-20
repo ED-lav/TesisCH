@@ -365,7 +365,7 @@
         }
 
         
-       /* ============================================ */
+     /* ============================================ */
 /* SECCIÓN 2: NUEVO DISEÑO CON FONDO, IMAGEN Y TARJETAS */
 /* ============================================ */
 .new-feature-section {
@@ -394,13 +394,16 @@
     align-items: center;
 }
 
+/*  CAMBIO PRINCIPAL: contain en lugar de cover + max-height */
 .feature-image img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    max-height: 550px;          /* ← limita la altura máxima para que sea proporcional */
+    object-fit: contain;        /* ← MUESTRA LA IMAGEN COMPLETA, sin recortes */
     border-radius: 1.5rem;
     box-shadow: var(--shadow-lg);
     display: block;
+    margin: 0 auto;             /* ← centra si el ancho no llena todo */
 }
 
 .feature-content {
@@ -435,8 +438,8 @@
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: var(--shadow-sm);
-    text-decoration: none;   /* ← Elimina subrayado en enlaces */
-    display: inline-block;    /* ← Para que no ocupe todo el ancho en desktop */
+    text-decoration: none;
+    display: inline-block;
 }
 
 .feature-btn:hover {
@@ -506,6 +509,10 @@
         margin: 0 auto;
     }
 
+    .feature-image img {
+        max-height: 400px;       /* ← ajuste para móvil */
+    }
+
     .feature-header h2 {
         font-size: 1.8rem;
         text-align: center;
@@ -517,9 +524,9 @@
     }
 
     .feature-btn {
-        display: block;      /* ← En móvil ocupa bloque para centrar */
-        margin: 0 auto;      /* ← Centrado horizontal */
-        width: fit-content;  /* ← Mantiene el ancho según contenido */
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
     }
 
     .feature-cards {
@@ -540,8 +547,8 @@
 /* Ajuste para pantallas grandes */
 @media (min-width: 1200px) {
     .feature-image img {
-        max-height: 600px;
-        object-fit: cover;
+        max-height: 600px;       /* ← también contain, sin recorte */
+        object-fit: contain;
     }
 }
         /* ============================================ */
@@ -583,71 +590,7 @@
             margin: 0 auto;
         }
 
-        /* Tarjetas como BOTONES */
-        .intl-cards {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-        }
-
-        .intl-card {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 1rem;
-            padding: 1rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.6rem;
-            flex: 1;
-            max-width: 220px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .intl-card:hover {
-            border-color: #25D366;
-            transform: translateY(-5px);
-            background: rgba(37, 211, 102, 0.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .intl-flag-wrap img {
-            width: 55px;
-            height: 55px;
-            object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .intl-card-body h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #FFFFFF;
-            margin: 0;
-            letter-spacing: -0.02em;
-        }
-
-        @media (max-width: 768px) {
-            .intl-cards {
-                flex-direction: column;
-                align-items: center;
-                gap: 1.2rem;
-            }
-            .intl-card {
-                width: 100%;
-                max-width: 200px;
-                padding: 0.8rem 1.2rem;
-            }
-            .intl-flag-wrap img {
-                width: 48px;
-                height: 48px;
-            }
-            .intl-card-body h3 {
-                font-size: 1rem;
-            }
-        }
+        
 
         /* ============================================ */
         /* SECCIÓN 4: CÓMO TRABAJAMOS (VIDEO) */
@@ -1091,7 +1034,7 @@
     </div>
 </section>
 
-        <!-- SECCIÓN 3: PRESENCIA GLOBAL + BOTONES DE MÉXICO Y ARGENTINA -->
+        <!-- SECCIÓN 3: PRESENCIA GLOBAL  -->
         <section class="presencia-section">
             <div class="container">
                 <div class="section-header animate-on-scroll">
@@ -1099,28 +1042,12 @@
                         <i class="bi bi-globe-americas"></i>
                         Presencia global
                     </div>
-                    <h2>Trabajamos de forma <span class="highlight">internacional</span></h2>
-                    <p>Asesoramos a estudiantes en Argentina y México con apoyo académico de excelencia, sin importar la distancia.</p>
+                    <h2>Acompañamiento académico <span class="highlight">sin Fronteras</span></h2>
+                    <p>Brindamos un servicio académico personalizado a estudiantes de distintos países,
+con profesionales especializados en cada área.</p>
                 </div>
 
-                <div class="intl-cards animate-on-scroll">
-                    <a href="https://wa.link/b9xgk5" target="_blank" class="intl-card" id="btn-mexico">
-                        <div class="intl-flag-wrap">
-                            <img src="https://flagcdn.com/w80/mx.png" alt="México">
-                        </div>
-                        <div class="intl-card-body">
-                            <h3>México</h3>
-                        </div>
-                    </a>
-                    <a href="https://wa.link/b9xgk5" target="_blank" class="intl-card" id="btn-argentina">
-                        <div class="intl-flag-wrap">
-                            <img src="https://flagcdn.com/w80/ar.png" alt="Argentina">
-                        </div>
-                        <div class="intl-card-body">
-                            <h3>Argentina</h3>
-                        </div>
-                    </a>
-                </div>
+                
             </div>
         </section>
 
